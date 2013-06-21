@@ -42,7 +42,7 @@
 
 	A. Make changes and then 
 		git commit -a -m hello.rb "Changes to hello.rb committed"
-		git commit --amend
+		git reset --hard HEAD^
 		
 		
     Q. Check repository status before adding changes to staging area, after adding changes to staging area and after committing changes .

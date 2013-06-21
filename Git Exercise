@@ -114,5 +114,7 @@
 		git stash list
 		git pop
 		git stash apply stash@{0}
-    create a repository on github for your working repository and push changes on remote repository.
+   Q. create a repository on github for your working repository and push changes on remote repository.
+	A. https://github.com/sahilbathlavinsol/gitExercise.git
+
 

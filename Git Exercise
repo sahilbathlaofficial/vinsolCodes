@@ -1,0 +1,118 @@
+
+    Q. Create a repository
+	A. git init
+	
+    Q. Make some changes -- add some files, change content of some files
+	A.	 cat > hello.rb (Writen "Sahil is great" -> CTRL+D)
+		 git add hello.rb
+		 cat >> hello.rb (Appended " and he is awsum" ->CTRL+D)
+		 git status ( File modified ) 
+
+    Q. Commit changes
+	A. git commit -m "hello.rb commited"
+
+    Q. repeat steps 1-3 for 2 more times. try to remove and ignore some files . Use git diff before each commit.
+	a) repeated for files a,to_delete
+	b) to_delete file is deleted and the change is commited
+		git rm to_delete
+		git commit -m "deleted"
+	c) difference checked using git diff
+	d) ~/.gitignore file contains 
+
+	# Compiled source #
+	###################
+	*.com
+	*.class
+	*.dll
+	*.exe
+	*.o
+	*.so
+
+    Q. create changes and revert those changes using git when those changes are not added to staging area?
+	A. Make changes and then	
+	git checkout -- hello.rb
+
+    Q.	create changes and revert those changes after adding changes to staging area?
+	A. Make changes and then
+		git add hello.rb
+		git status
+		git reset --hard hello.rb
+
+    Q. create change and revert those changes after committing those changes .
+
+	A. Make changes and then 
+		git commit -a -m hello.rb "Changes to hello.rb committed"
+		git commit --amend
+		
+		
+    Q. Check repository status before adding changes to staging area, after adding changes to staging area and after committing changes .
+	A. Done 
+    
+    Q. Display all the commits .
+	A. git log
+
+    Q. Display a specific commit .
+	A. git log <hash>
+		or 
+	git log -n 1 --skip=x ( x specifies how many commits to skip from top)
+
+    Q. create branches called "feature1" and "feature2" from master. 
+	A. 	git checkout -b feature1
+		git checkout master
+		git checkout -b feature 2
+
+    Q. Delete branch "feature2".
+	A. 	git checkout master
+		git branch -d feature2
+
+    Q. Make some commits on "feature1".
+	A.	git checkout feature1
+		cat >> a (Make some changes -> CTRL+D)
+		git commit -a -m "Commit from feature1"
+
+    Q. Make some commits on branch "master".
+	A.	git checkout master
+		cat >> a (Make some changes -> CTRL+D) -- same line to create conflict in next step
+		git commit -a -m "Commit from master"
+		git log --pretty=oneline
+	
+    Q. merge branch "feature1" in "master" (make some conflicts by changing same file on same line in both the branches)
+	A. 	git merge feature1
+		vi a
+		git add a
+		git commit -m "Conflict of merge resolved"
+	
+
+    Q.create branch "feature2" from master .
+	A.	git checkout -b feature2
+
+    Q. Make some commits on "feature2".
+	A.	git checkout feature2
+		cat >> a (Make some changes -> CTRL+D)
+		git commit -a -m "Commit from feature2"
+
+    Q. Make some commits on branch "master".
+	A.	git checkout master
+		cat >> a (Make some changes -> CTRL+D) -- same line to create conflict in next step
+		git commit -a -m "Commit from master again"
+		git log --pretty=oneline
+	
+    Q. rebase branch "master" in "feature2" (make some conflicts by changing same file on same line in both the branches) .
+	A.	git checkout feature2
+		git rebase master
+		vi a (Solve conflict)
+		git add a
+		git rebase --continue
+    Q. find the differences between "merge" and "rebase" in above cases.
+	A.	while conflict there is temp (no branch) created on which all the changes of master are applied and then of feature2
+		on merging to master it creates a fast forward.
+    Q. Use git stash
+	A.	cat >> a
+		git stash
+		cat >> hello.rb
+		git stash
+		git stash list
+		git pop
+		git stash apply stash@{0}
+    create a repository on github for your working repository and push changes on remote repository.
+

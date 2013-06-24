@@ -1,0 +1,96 @@
+/*
+Author - Sahil Bathla
+Description - Drop down list css
+Version - 1.0
+*/
+
+#menu
+{
+display:inline-block;
+margin:0px;
+padding:0px; /*overwriting browser specific margin padding for lists*/
+}
+
+
+#menu li 
+{
+
+display:inline-block;
+position:relative;
+}
+
+#menu li a
+{
+text-decoration:none;
+font-family: Georgia, serif;
+font-size: 18px;
+font-style: italic;
+color:black;
+padding-left:20px;
+padding-right:20px;
+margin-left:2px;
+height:37px;
+background-color:#CFCFCF;
+border-bottom: solid 1px #6d6d6d;
+}
+
+
+#menu > li > a:first-child
+{
+margin-left:0px;
+}
+
+#menu li ul
+{
+display:none;
+position:absolute;
+}
+
+#menu li ul li
+{
+padding-top:5px;
+padding-bottom:5px;
+display:block; 
+}
+
+#menu li:hover a
+{
+background-color:white;
+color:#8c8c8c;
+border:solid 1px #6d6d6d;
+border-bottom: none;
+}
+
+
+#menu li:hover ul
+{
+display:block;
+padding:10px;
+border:solid 1px #6d6d6d;
+border-top:none;
+width:178px;
+
+}
+
+
+#menu li:hover ul li a
+{
+text-decoration:none;
+color:black;
+font-size:14px;
+border:none;
+}
+
+#menu li:hover ul li:hover a
+{
+text-decoration:none;
+color:#bd0707;
+}
+
+
+
+
+
+
+
+

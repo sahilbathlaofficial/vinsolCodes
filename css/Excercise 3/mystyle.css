@@ -6,7 +6,7 @@ Version - 1.0
 
 #header
   {
-    margin:20px;
+    margin:0px;
     border-bottom:solid 2px #db2977;
   }
 
@@ -23,12 +23,13 @@ Version - 1.0
     font-size:13px;
     color:black;
     position:absolute;
-    top:65px;
-    right:60px;
+    top:60px;
+    right:10px;
   }
 
 #contactDetails span a
   {
+    text-decoration:none;
     color:#045198;
   }
 
@@ -39,7 +40,7 @@ Version - 1.0
     text-align:left;
   }
 
-h3
+p
   {
     font:'tahoma';
     font-size:18px;
@@ -67,6 +68,14 @@ h3
     width:100px;
     padding-right:20px;
     padding-bottom:20px;
+    vertical-align:top;
+    margin-top:5px;
+    text-align:right;
+  }
+
+.contact
+  {
+    margin-left:20px;
   }
 
 input
@@ -75,6 +84,22 @@ input
     border:solid 1px #b9b9b9;
     width:360px;
     height:25px;
+  }
+
+textarea
+  {
+    background:white;
+    border:solid 1px #b9b9b9;
+    width:360px;
+    height:135px;
+  }
+
+select
+  {
+    width:110px;
+    font:'tahoma';
+    color:#6f6f6f;
+    font-size:13px;
   }
 
 #submit
@@ -88,4 +113,7 @@ input
     font-size:14px;
     text-align:center;
     margin-top:20px;
+    margin-left:120px;
   }
+
+

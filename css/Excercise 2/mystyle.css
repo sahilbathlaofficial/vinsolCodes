@@ -1,0 +1,84 @@
+/*
+Author - Sahil Bathla
+Description - Drop down list css
+Version - 1.0
+*/
+
+html,body
+  {
+    margin:0px;
+    padding:0px;
+  }
+
+#header
+  {
+    background:#b2e7ff;
+    font:'tohoma';
+    font-size:24px;
+    color:black;
+    text-align:center;
+    border-bottom: solid 2px #0ab1ff;
+    margin-top:-25px;
+  }
+
+#footer
+  {
+    background:#3cff78;
+    font:'tohoma';
+    font-size:24px;
+    color:black;
+    text-align:center;
+    border-bottom: solid 2px #0ab1ff;
+    margin-top:-25px;
+  }
+
+#container
+  {
+    overflow:hidden;
+  }
+
+#left
+  {
+    background:#0ab1ff;
+    font:'tohoma';
+    font-size:18px;
+    color:black;
+    padding:25px 10px;
+    width:250px;
+    float:left;
+    padding-bottom:1000px;
+    margin-bottom:-1000px;
+    }
+
+#navigation ul li,#navigation ul li a
+  {
+    font-size:14px;
+    color:white;
+  }
+
+#leftDesc
+  {
+    font-size:12px;
+  }
+
+
+#right
+  {
+    background:#ededed;
+    font:'tohoma';
+    font-size:24px;
+    color:black;
+    padding:20px;
+    float:left;
+    width:710px;	
+    padding-bottom:1000px;
+    margin-bottom:-1000px;
+  }
+
+.rightDesc
+  {
+    font-size:12px;
+    color:#802525;
+  }
+
+

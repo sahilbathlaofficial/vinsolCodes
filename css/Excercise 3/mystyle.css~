@@ -1,0 +1,90 @@
+/*
+Author - Sahil Bathla
+Description - Forms css
+Version - 1.0
+*/
+
+#header
+  {
+    margin:20px;
+    border-bottom:solid 2px #db2977;
+  }
+
+#logo
+  {
+    background:url('vinsol-logo.png');  
+    height:70px;
+    background-repeat:no-repeat;
+  }
+
+#contactDetails
+  {
+    font:'tahoma';
+    font-size:13px;
+    color:black;
+    position:absolute;
+    top:65px;
+    right:60px;
+  }
+
+#contactDetails span a
+  {
+    color:#045198;
+  }
+
+#formContainer
+  {
+    width:500px;
+    margin:auto;
+    text-align:left;
+  }
+
+h3
+  {
+    font:'tahoma';
+    font-size:18px;
+    color:#2c2d86;
+  }
+
+#userForm
+  {
+    width:500px;
+    background:#ececec;
+    border:solid 1px #bcbcbc;
+    padding:20px 0px 20px 30px;
+    font:'tahoma';
+    color:#6f6f6f;
+    font-size:13px;
+  }
+
+.label
+  {
+    display:inline-block;
+    font:'tahoma';
+    color:black;
+    font-size:14px;
+    width:100px;
+    padding-right:20px;
+    padding-bottom:20px;
+  }
+
+input
+  {
+    background:white;
+    border:solid 1px #b9b9b9;
+    width:360px;
+    height:25px;
+  }
+
+#submit
+  {
+    background:#dc2927;
+    border:solid 1px #a10200;
+    width:130px;
+    height:32px;
+    font:'tahoma';
+    color:white;
+    font-size:14px;
+    text-align:center;
+    margin-top:20px;
+  }

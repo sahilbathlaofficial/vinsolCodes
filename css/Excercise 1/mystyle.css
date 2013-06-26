@@ -9,6 +9,7 @@ Version - 1.0
     display:inline-block;
     margin:0px;
     padding:0px; /*overwriting browser specific margin padding for lists*/
+
   }
 
 
@@ -16,6 +17,7 @@ Version - 1.0
   {
     display:inline-block;
     position:relative;
+    margin-left:2px;
   }
 
 #menu li a
@@ -28,16 +30,18 @@ Version - 1.0
     color:black;
     padding-left:20px;
     padding-right:20px;
-    margin-left:2px;
+    height:37px;
     line-height:37px;
+    padding-top:2px;
     background-color:#CFCFCF;
     border-bottom: solid 1px #6d6d6d;
   }
 
 
-#menu  li  a:first-child
+#menu > li:first-child
   {
     margin-left:0px;
+    color:red;
   }
 
 #menu li ul
@@ -68,9 +72,7 @@ Version - 1.0
     border-bottom:none;
     padding-left:19px;
     padding-right:19px;
-    padding-bottom:1px;
-    height:36px;
-    line-height:36px;
+    padding-top:1px;
   }
 
 

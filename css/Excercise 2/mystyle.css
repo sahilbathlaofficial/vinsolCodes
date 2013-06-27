@@ -46,8 +46,8 @@ html,body
     padding:25px 10px;
     width:250px;
     float:left;
-    padding-bottom:1000px;
-    margin-bottom:-1000px;
+    padding-bottom:100%;
+    margin-bottom:-100%;
     }
 
 #navigation ul li,#navigation ul li a
@@ -71,8 +71,8 @@ html,body
     padding:20px;
     float:left;
     width:710px;	
-    padding-bottom:1000px;
-    margin-bottom:-1000px;
+    padding-bottom:100%;
+    margin-bottom:-100%;
   }
 
 .rightDesc

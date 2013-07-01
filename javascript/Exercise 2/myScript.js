@@ -28,13 +28,13 @@ function checkLimit(self)
       days[count++] = checkBoxArray[i].value;  
     }
 
-    if(count==maxChecks && checkBoxArray[length].checked==false )
+    if(count==maxChecks && checkBoxArray[length].checked == false )
     {
       for (j = 0;j < maxChecks; j = j + 1)
       {
         errorString = errorString + " " + days[j];
       }
-      alert("3 checkboxes already selected "+errorString);
+      alert("3 checkboxes already selected " + errorString);
       // set self to be false if count>3 //
       self.checked = false;  
       break;
@@ -46,7 +46,7 @@ function checkLimit(self)
   {
     for(i = 0;i < length;i = i + 1)
     {
-      checkBoxArray[i].checked=false;
+      checkBoxArray[i].checked = false;
     }
   }  
 

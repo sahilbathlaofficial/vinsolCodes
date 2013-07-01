@@ -4,16 +4,10 @@
   Version - 1.0
 */
 
-function checkAll()
+function reverseCheck()
   {
     var checkBoxCollection = document.getElementsByName('checkBox');
     for each(checkBox in checkBoxCollection)
-    checkBox.checked=true;
+    checkBox.checked=!checkBox.checked;
   }
 
-function removeAll()
-  {
-    var checkBoxCollection = document.getElementsByName('checkBox');
-    for each(checkBox in checkBoxCollection)
-    checkBox.checked=false;
-  }

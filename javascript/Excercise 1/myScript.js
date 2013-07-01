@@ -4,10 +4,13 @@
   Version - 1.0
 */
 
-function reverseCheck()
+function reverseCheck(x)
   {
     var checkBoxCollection = document.getElementsByName('checkBox');
     for each(checkBox in checkBoxCollection)
-    checkBox.checked=!checkBox.checked;
+      if(x==1)
+        checkBox.checked=true;
+      else
+        checkBox.checked=false;
   }
 

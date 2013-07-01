@@ -4,13 +4,15 @@
   Version - 1.0
 */
 
-function reverseCheck(x)
-  {
-    var checkBoxCollection = document.getElementsByName('checkBox');
-    for (i=0;i<checkBoxCollection.length;i++)
-      if(x==1)
-        checkBoxCollection[i].checked=true;
-      else
-        checkBoxCollection[i].checked=false;
-  }
+//This functions reverses the checks made on the checkList
+
+function setCheck(checkValue) 
+{
+  var i = 0;
+  var checkBoxCollection = document.getElementsByName('checkBox');
+    for (i = 0; i < checkBoxCollection.length; i = i + 1)
+    {
+      checkBoxCollection[i].checked = checkValue;
+    }
+}
 

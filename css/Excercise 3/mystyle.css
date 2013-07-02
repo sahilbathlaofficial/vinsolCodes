@@ -78,7 +78,7 @@ p
     margin-left:20px;
   }
 
-input
+input[type='text'],input[type='password']
   {
     background:white;
     border:solid 1px #b9b9b9;

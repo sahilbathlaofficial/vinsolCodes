@@ -42,8 +42,8 @@ function addRow()
 {
   var row = document.createElement("tr");
   var mainTable = document.getElementById('mainTable');
-  var rowCount = mainTable.getElementsByTagName('tr').length;
-  var rowId = "row" + rowCount;
+  var timestamp = new Date().getUTCMilliseconds();
+  var rowId = "row" + timestamp;
   row.setAttribute("id",rowId);
 
   for (i = 0;i < 3; i++)

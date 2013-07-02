@@ -42,7 +42,7 @@ function addRow()
 {
   var row = document.createElement("tr");
   var mainTable = document.getElementById('mainTable');
-  var timestamp = new Date().getUTCMilliseconds();
+  var timestamp = new Date().getTime();
   var rowId = "row" + timestamp;
   row.setAttribute("id",rowId);
 

@@ -4,6 +4,8 @@
   Version - 1.0
 */
 
+// This function saves the content of input fields if not empty
+
 function saveRow(rowId)
 {
   var inputName = "name" + rowId;
@@ -19,11 +21,13 @@ function saveRow(rowId)
   }
 }
 
+//This function deletes the row corresponding to rowId
 function deleteRow(rowId)
 {
   document.getElementById('mainTable').removeChild(document.getElementById(rowId));
 }
 
+//This function edits the row corresponding to rowId
 function editRow(rowId)
 {
   var row = document.getElementById(rowId);
@@ -33,6 +37,7 @@ function editRow(rowId)
   cols[2].innerHTML = "<input type='button' value='save' onClick='saveRow(\"" + rowId + "\")' />";
 }
 
+//This function appends the row corresponding to the mainTable
 function addRow()
 {
   var row = document.createElement("tr");

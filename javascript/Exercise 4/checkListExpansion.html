@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta name="description" content="CheckList Expansion" />
+    <meta name="keywords" content="HTML,JavaScript,excercise,vinsol,sahil" />
+    <meta name="author" content="Sahil Bathla" />
+    <meta charset="UTF-8" />
+
+    <title> CheckList Expansion </title>
+
+    <script type="text/javascript" src="myScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    
+
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <ul id="mainList">
+
+        <li>
+          <input type="checkbox" name="colors" id="colors" onClick="reverseDisplay('subColors');" />
+          <label for="colors">Colors</label>
+            <ul id="subColors">
+              <li>
+                <input type="checkbox" id="red" name="subColorsName" />
+                <label for="red">Red</label>
+              </li>
+              <li>
+                <input type="checkbox" id="yellow" name="subColorsName" />
+                <label for="yellow">Yellow</label>
+              </li>
+              <li>
+                <input type="checkbox" id="green" name="subColorsName" />
+                <label for="green">Green</label>
+              </li>
+              <li>
+                <input type="checkbox" id="blue"name="subColorsName" />
+                <label for="blue">Blue</label>
+              </li>
+            </ul>
+        </li>
+
+        <li>
+          <input type="checkbox" name="drinks" id="drinks" onClick="reverseDisplay('subDrinks');" />
+          <label for="drinks">Drinks</label>
+            <ul id="subDrinks">
+              <li>
+                <input type="checkbox" id="coke" name="subDrinksName" />
+                <label for="coke">Coke</label>
+              </li>
+              <li>
+                <input type="checkbox" id="pepsi" name="subDrinksName" />
+                <label for="pepsi">Pepsi</label>
+              </li>
+              <li>
+                <input type="checkbox" id="dew" name="subDrinksName" />
+                <label for="dew">Dew</label>
+              </li>
+            </ul>
+        </li>
+
+        <li>
+          <input type="checkbox" name="movies" id="movies" onClick="reverseDisplay('subMovies');" />
+          <label for="movies">Movies</label>
+             <ul id="subMovies">
+              <li>
+                <input type="checkbox" id="dar" name="subMoviesName"  />
+                <label for="dar">Dar</label>
+              </li>
+              <li>
+                <input type="checkbox" id="sir" name="subMoviesName" />
+                <label for="sir">Sir</label>
+              </li>
+            </ul>
+        </li>
+
+        <li>
+          <input type="checkbox" name="bikes" id="bikes" onClick="reverseDisplay('subBikes');" />
+          <label for="bikes">Bikes</label>
+            <ul id="subBikes">
+              <li>
+                <input type="checkbox" id="vrod" name="subBikesName" />
+                <label for="vrod">V-rod</label>
+              </li>
+              <li>
+                <input type="checkbox" id="pulsar" name="subBikesName" />
+                <label for="pulsar">Pulsar</label>
+              </li>
+              <li>
+                <input type="checkbox" id="cbz" name="subBikesName" />
+                <label for="cbz">CBZ</label>
+              </li>
+            </ul>
+        </li>
+
+      </ul>
+
+    </div>
+  </body>
+</html>

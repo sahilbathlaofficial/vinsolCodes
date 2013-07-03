@@ -1,0 +1,28 @@
+/*
+Author - Sahil Bathla
+Description - Drop down list css
+Version - 1.0
+*/
+
+body
+{
+  margin:0px;
+  padding:0px;
+}
+
+#container
+{
+  height:100px;
+  overflow:scroll;
+}
+
+ul
+{
+  margin-top:0px;
+  list-style:none;
+}
+
+#subColors,#subDrinks,#subBikes,#subMovies
+{
+  display:none;
+}

@@ -11,7 +11,7 @@ function person(ageOfPerson)
   this.age = ageOfPerson;
   this.compare = function(otherPerson) 
   {
-    if( !(this.age instanceof Number) || !(otherPerson.age instanceof Number) )
+    if( isNaN(parseInt(this.age)) || isNaN(parseInt(otherPerson.age)) )
     {
       alert("The input is invalid!! Numbers only");
     } 

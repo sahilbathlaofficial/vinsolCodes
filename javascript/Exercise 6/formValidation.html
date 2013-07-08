@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta name="description" content="CheckList Expansion" />
+    <meta name="keywords" content="HTML,JavaScript,excercise,vinsol,sahil" />
+    <meta name="author" content="Sahil Bathla" />
+    <meta charset="UTF-8" />
+
+    <title> CheckList Expansion </title>
+
+    <script type="text/javascript" src="validationScript.js"></script>
+    <link rel="stylesheet" type="text/css" href="formStyle.css">
+    
+
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="formHeader">
+        <p>Registeration Form</p>
+      </div>
+      <form id="validationForm" action="">
+      <span class="formText">Login Id</span><input type="text" id="loginId" name="loginId" /><br />
+      <span class="formText">Email</span><input type="email" id="email" name="email" /><br />
+      <span class="formText">Name</span><input type="text" id="nameOfPerson" name="nameOfPerson" /><br />
+      <span class="formText">Timezone</span>
+      <select id="timeZone" name="timeZone" />
+        <option value="GMT">GMT</option>
+        <option value="GMT +5.5">GMT +5.50</option>
+        <option value="EST">EST</option>
+        <option value="PST">PST</option>
+      </select><br />
+      <span class="formText">Home Page</span><input type="text" id="homePage" name="homePage" /><br />
+      <span class="formText">About me</span><br /><textarea id="aboutMe" name="aboutMe" rows="10" cols="20"></textarea><br />
+      <input type="checkbox" name="notification" id="notification">
+      <label for="notification">
+        <span id="notificationText">Receive notification of comments</span>
+      </label>
+      <p id="formInfo">You will be sent an email when someone post comments to your blog or Album</p>
+      <div id="submitText">
+        <p>Your password would be mailed to you</p>
+        <input type="button" value="Go" id="submitButton"/>
+      </div>
+      </form>
+    </div>
+  </body>
+</html>

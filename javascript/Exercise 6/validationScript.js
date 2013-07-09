@@ -5,59 +5,40 @@
 */
 
 
-function formClass(formName)
+function formClass(form)
 {
-  this.loginId = formName.loginId.value;
-  this.email = formName.email.value;
-  this.nameOfPerson = formName.nameOfPerson.value;
-  this.timeZone = formName.timeZone.value;
-  this.homePage = formName.homePage.value;
-  this.aboutMe = formName.aboutMe.value;
-  this.notification = formName.notification.checked;
-  var flag = true;
+  this.form = form;
+  this.elements = this.form.querySelectorAll('input[type="text"],input[type="email"],textarea,input[type="checkbox"]');
+  
 
   this.validate = function()
   {
-    if(this.loginId === '')
+    for(i = 0 ; i <= this.elements.length ; i = i + 1 )
     {
-      alert("Log In Id missing");
-      formName.loginId.focus();
-    }
-
-    else if(this.email === '')
-    {
-      alert("Email missing");
-      formName.email.focus();
-    }
-
-    else if(this.nameOfPerson === '')
-    {
-      alert("Name missing");
-      formName.nameOfPerson.focus();
-    }
-
-    else if(this.timeZone === '')
-    {
-      alert("Timezone missing");
-      formName.timeZone.focus();
-    }
-  
-    else if(this.homePage === '')
-    {
-      alert("Homepage missing");
-      formName.homePage.focus();
-    }
-
-    else if(this.aboutMe === '' || this.aboutMe.length < 30)
-    {
-      alert("About me length should be greater than 30");
-      formName.aboutMe.focus();
-    }
-    
-    else if(this.notification === false)
-    {
-      alert("Notificatios must be recieved");
-      formName.notification.focus();
+      if( i === this.elements.length)
+      {
+        this.form.submit();
+      }
+      
+      else if(this.elements[i].type != 'checkbox' && (this.elements[i].value === '' || this.elements[i].value.replace(/ /g,'').length === 0) )
+      {
+        alert(this.elements[i].previousSibling.textContent + " can not be empty" );
+        this.elements[i].focus();
+        break;
+      }
+      else if(this.elements[i].type === 'checkbox' && this.elements[i].checked === false)
+      {
+        alert(this.elements[i].name + " must be checked ");
+        this.elements[i].focus();
+        break;
+      }
+      else if(this.elements[i].type === 'textarea' && this.elements[i].value.length < 50)
+      {
+        alert("Minimum length of this box is 50");
+        this.elements[i].focus();
+        break;
+      }      
+      
     }
     
   }
@@ -72,6 +53,6 @@ var formHandler = function ()
 
 window.onload = function () {
   var submitButton = document.getElementById('submitButton');
-  submitButton.addEventListener('click',formHandler,false);
+  submitButton.addEventListener('click', formHandler, false);
 }
 

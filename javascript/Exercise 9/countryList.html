@@ -1,0 +1,45 @@
+ <!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta name="description" content="Add or Remove Countries" />
+    <meta name="keywords" content="HTML,JavaScript,excercise,vinsol,sahil" />
+    <meta name="author" content="Sahil Bathla" />
+    <meta charset="UTF-8" />
+
+    <title> Add or Remove Countries </title>
+
+    <script type="text/javascript" src="addRemoveCountries.js"></script>
+    <link type="text/css" rel="stylesheet" href="countryStyle.css" />
+  
+  </head>
+
+  <body>
+    <div id="container">
+    
+      <span>
+        <select id="firstList" size="5" multiple>
+          <option>India</option>
+          <option>Denmark</option>
+          <option>USA</option>
+          <option>Canada</option>
+          <option>France</option>
+          <option>Spain</option>
+        </select>
+      </span>
+
+      <span>
+        <input type="button" value="ADD >" onClick="shiftSelected('firstList')" />
+        <input type="button" value="< Remove" onClick="shiftSelected('secondList')"  />
+      </span>
+
+       <span>
+        <select id="secondList" size="5" multiple>
+        </select>
+      </span>
+    </div>
+    
+  </body>
+</html>

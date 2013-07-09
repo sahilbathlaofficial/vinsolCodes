@@ -1,0 +1,39 @@
+/*
+Author - Sahil Bathla
+Description - Drop down list css
+Version - 1.0
+*/
+
+span
+{
+  position:relative;
+  display:inline-block;
+  padding:10px;
+  float:left;
+
+}
+
+
+select
+{
+width:200px;
+}
+
+input
+{
+vertical-align:top;
+display : block;
+margin:12px 0px;
+background: #FF6000;
+border: 1px #FF6000;
+border-radius: 10px;
+padding:5px 10px;
+color:white;
+font-size:10px;
+}
+
+#container
+{
+  width:50%;
+  margin:auto;
+}

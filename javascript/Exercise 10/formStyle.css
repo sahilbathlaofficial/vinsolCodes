@@ -1,0 +1,81 @@
+/*
+Author - Sahil Bathla
+Description - Drop down list css
+Version - 1.0
+*/
+
+body,p
+{
+  margin:0px;
+  padding:0px;
+}
+
+#container
+{
+  background: #E8F2D7;
+  width:20em;
+  margin:auto;
+  padding:0px 0px 10px 10px;
+}
+
+.formText,#notificationText
+{
+  font-size:12px;
+  font-weight:bold;
+  display:inline-block;
+  padding-right:50px;
+}
+
+#formInfo
+{
+  font-size:10px;
+  font-weight:400;
+}
+
+textarea
+{
+width:23em;
+}
+
+.formText
+{
+  width:5em;
+}
+
+#submitText
+{
+  text-align:center;
+  width:18em;
+  margin:auto;
+  font-size:12px;
+  font-weight:400;
+}
+
+#formHeader
+{
+  font-size:12px;
+  font-weight:bold;
+  text-align:center;
+  background:#9AB386;
+  color:white;
+  margin-left:-10px;
+  margin-bottom:20px;
+}
+
+input,textarea,select
+{
+  border: 1px solid green;
+}
+select
+{
+  width:10em;
+  background:white;
+}
+
+input[type='button']
+{
+  border: 1px solid #566238;
+  border-radius:25px;
+  background:#566238;
+  color:white;
+}

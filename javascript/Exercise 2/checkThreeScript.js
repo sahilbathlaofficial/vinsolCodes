@@ -10,11 +10,8 @@ function checkLimit(self)
 {
 
   var count = 0,
-    checkBoxArray=document.getElementsByName('checkBox'),
-    length = checkBoxArray.length-1,
-    lastElement = length,
-    maxChecks = 3,
-    errorString = "";
+      maxChecks = 3,
+      errorString = "";
 
   if(self.checked === false)
     {

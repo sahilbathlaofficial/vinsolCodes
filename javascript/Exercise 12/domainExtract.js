@@ -6,9 +6,9 @@
 
 // Class for Form
 
-function formClass(form)
+function Form(formObject)
 {
-  this.form = form;
+  this.form = formObject;
   var regexURL = /^(http[s]?:\/\/)?(www.)?[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*\.[a-z.]{2,6}[/]?([\w]+[/]{0,1})*[^/]*$/;
   var hostName = '',
       domain = '',
@@ -25,7 +25,7 @@ function formClass(form)
     var hostName = this.form.elements[0].value.replace(/^(http[s]*:\/\/)?(www.)?/,'').replace(/\/.*$/,'');
     var domain= hostName.slice(hostName.search(/[\w]+\.[a-z.]{2,4}$/),hostName.length);
     alert("Domain: " + domain);
-    var subDomain =  hostName.replace(domain,'').slice(0,-1);
+    var subDomain =  hostName.slice(0,hostName.search(/[\w]+\.[a-z.]{2,4}$/)).slice(0,-1);
     if(subDomain !== '')
     {
       alert("Sub Domain: " + subDomain);
@@ -38,7 +38,7 @@ function checkDomain(formObject)
 {
   // prevent submit action initially
   window.event.preventDefault();
-  var form = new formClass(formObject);
+  var form = new Form(formObject);
   form.extractDomain(); 
 }
   

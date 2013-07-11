@@ -11,10 +11,10 @@ window.onload = function ()
 {
 
   var url = '';
-  while(url === '')
+  while(url === '' || url.replace(/ /g,'').length === 0 )
   {
     url = prompt('Enter url to open (i.e. xyz.com)','http://www.google.com');
-    if(url === '')
+    if(url === '' || url.replace(/ /g,'').length === 0)
     {
       alert("No url entered!! Kindly enter it again !!");
     }

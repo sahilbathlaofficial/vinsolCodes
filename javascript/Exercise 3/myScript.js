@@ -45,23 +45,13 @@ function addRow()
   var timestamp = new Date().getTime();
   var rowId = "row" + timestamp;
   row.setAttribute("id",rowId);
-
-  for (i = 0;i < 3; i++)
-  {
-    var col = document.createElement("td");
-    if (i == 0)
-    {
-      col.innerHTML="<input id='name" + rowId + "'/>";
-    }
-    else if (i == 1)
-    {
-      col.innerHTML="<input id='email" + rowId + "'/>";
-    }
-    else
-    {
-      col.innerHTML="<input type='button' value='save' onClick='saveRow(\"" + rowId + "\")' />";
-    }
-    row.appendChild(col);
+  var newColumn = document.createElement("td");
+  newColumn.innerHTML="<input id='name" + rowId + "'/>";
+  row.appendChild(newColumn);
+  newColumn.innerHTML="<input id='email" + rowId + "'/>";
+  row.appendChild(newColumn);
+  newColumn.innerHTML="<input type='button' value='save' onClick='saveRow(\"" + rowId + "\")' />";
+  row.appendChild(newColumn);
   }
   mainTable.appendChild(row);
 }

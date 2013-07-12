@@ -5,10 +5,10 @@
 */
 
 
-function formClass(form)
+function Form(form)
 {
   this.form = form;
-  this.elements = this.form.querySelectorAll('input[type="text"],input[type="email"],textarea,input[type="checkbox"]');
+  this.elements = document.getElementsByClassName('inputElement');
   
 
   this.validate = function()
@@ -20,7 +20,7 @@ function formClass(form)
         this.form.submit();
       }
       
-      else if(this.elements[i].type != 'checkbox' && (this.elements[i].value === '' || this.elements[i].value.replace(/ /g,'').length === 0) )
+      else if(this.elements[i].type !== 'checkbox' && (this.elements[i].value === '' || this.elements[i].value.trim().length === 0) )
       {
         alert(this.elements[i].previousSibling.textContent + " can not be empty" );
         this.elements[i].focus();
@@ -46,7 +46,7 @@ function formClass(form)
 
 var formHandler = function ()
 {
-  var form = new formClass(document.forms[0]);
+  var form = new Form(document.forms[0]);
   form.validate();
 }
 

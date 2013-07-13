@@ -3,64 +3,77 @@
   Description - Validate form.
   Version - 1.0
 */
+function regexCheck (element,regex)
+{
+  if (!(regex).test(element.value))
+  {
+  alert(element.previousSibling.textContent + " is not in proper format" );
+  element.focus();
+  return false;
+  }
+}
 
 
-function formClass(form)
+function Form(form)
 {
   this.form = form;
-  this.elements = document.getElementsByClassName('inputElement');
-  var regexEmail = /^[a-z0-9._%]+@[a-z0-9]+\.[a-z]{2,4}(\.[a-z]{2,4}){0,1}$/;
+  this.inputFields = document.getElementsByClassName('inputElement');
+  this.textArea = document.getElementById('aboutMe');
+  this.checkBox = document.getElementById('notification');
+  this.email = document.getElementById('email');
+  this.homePage = document.getElementById('homePage');
+
+  var regexEmail = /^[a-zA-Z0-9._%]+@[a-zA-Z0-9]+\.[\w]{2,4}(\.[\w]{2,4}){0,1}$/;
   var regexURL = /^(http[s]{0,1}:\/\/){0,1}(www.){0,1}[a-zA-Z0-9]+(\.[a-zA-Z0-9]+)*\.[a-z.]{2,6}[/]{0,1}([\w]+[/]{0,1})*[^/]*$/;
+  var flag = true;
   
 
   this.validate = function()
   {
-    for(i = 0 ; i <= this.elements.length ; i = i + 1 )
+    for (i = 0 ; i < this.inputFields.length ; i = i + 1 )
     {
-      if( i === this.elements.length)
-      {
-        this.form.submit();
-      }
       
-      else if(this.elements[i].type != 'checkbox' && (this.elements[i].value === '' || this.elements[i].value.trim().length === 0) )
+      if (this.inputFields[i].value === '' || this.inputFields[i].value.trim().length === 0)
       {
-        alert(this.elements[i].previousSibling.textContent + " can not be empty" );
-        this.elements[i].focus();
+        alert(this.inputFields[i].previousSibling.textContent + " can not be empty" );
+        this.inputFields[i].focus();
+        flag = false;
         break;
       }
-      else if(this.elements[i].type === 'checkbox' && this.elements[i].checked === false)
-      {
-        alert(this.elements[i].name + " must be checked ");
-        this.elements[i].focus();
-        break;
-      }
-      else if(this.elements[i].type === 'textarea' && this.elements[i].value.length < 50)
+    }
+
+    if (flag === true)
+    {
+      if (this.textArea.value.length < 50)
       {
         alert("Minimum length of this box is 50");
-        this.elements[i].focus();
-        break;
-      }     
-      else if(this.elements[i].id === 'email' && (regexEmail).test(this.elements[i].value) === false )
-      {
-        alert("Email is not in the correct format");
-        this.elements[i].focus();
-        break;
+        this.textArea.focus();
+        flag = false;
       }
-      else if(this.elements[i].id == 'homePage' && (regexURL).test(this.elements[i].value) === false )
+        
+      else if (this.checkBox.checked === false)
       {
-        alert("Home Page is not in the correct format");
-        this.elements[i].focus();
-        break;
+        alert(this.checkBox.name + " must be checked ");
+        this.checkBox.focus();
+        flag = false;
       }
-      
-    }
+             
+      else if (regexCheck(email,regexEmail) == false || regexCheck(homePage,regexURL) == false )
+      {
+       flag = false;
+      }
     
+      else
+      {
+      this.form.submit();
+      }
+    }   
   }
 }
 
 var formHandler = function ()
 {
-  var form = new formClass(document.forms[0]);
+  var form = new Form (document.forms[0]);
   form.validate();
 }
 

@@ -1,52 +1,61 @@
 /*
   Author - Sahil Bathla
   Description - Validate form.
-  Version - 1.0
+  Version - 2.0
 */
-
 
 function Form(form)
 {
   this.form = form;
-  this.elements = document.getElementsByClassName('inputElement');
+  this.textFields = document.getElementsByClassName('inputElement');
+  this.aboutMe = document.getElementById('aboutMe');
+  this.notification = document.getElementById('notification');
+  // flag to check if form is submitable or not 
+  var flag = true;
   
 
   this.validate = function()
   {
-    for (i = 0 ; i <= this.elements.length ; i = i + 1 )
+    for (i = 0 ; i < this.textFields.length ; i = i + 1 )
     {
-      if( i === this.elements.length)
-      {
-        this.form.submit();
-      }
       
-      else if (this.elements[i].type !== 'checkbox' && (this.elements[i].value === '' || this.elements[i].value.trim().length === 0) )
+      if (this.textFields[i].value === '' || this.textFields[i].value.trim().length === 0)
       {
-        alert(this.elements[i].previousSibling.textContent + " can not be empty" );
-        this.elements[i].focus();
+        alert(this.textFields[i].previousSibling.textContent + " can not be empty" );
+        this.textFields[i].focus();
+        flag = false;
         break;
       }
-      else if (this.elements[i].type === 'checkbox' && this.elements[i].checked === false)
-      {
-        alert(this.elements[i].name + " must be checked ");
-        this.elements[i].focus();
-        break;
-      }
-      else if (this.elements[i].type === 'textarea' && this.elements[i].value.length < 50)
+    }
+
+    if (flag === true)
+    {
+      if (this.aboutMe.value.length < 50)
       {
         alert("Minimum length of this box is 50");
-        this.elements[i].focus();
-        break;
-      }      
-      
-    }
-    
+        this.aboutMe.focus();
+        flag = false;
+      }
+        
+      else if (this.notification.checked === false)
+      {
+        alert(this.notification.name + " must be checked ");
+        this.checkBox.focus();
+        flag = false;
+      }
+             
+      else
+      {
+      this.form.submit();
+      }
+    }  
+  // end of validate function 
   }
 }
 
 var formHandler = function ()
 {
-  var form = new Form(document.forms[0]);
+  var form = new Form (document.forms[0]);
   form.validate();
 }
 

@@ -1,0 +1,28 @@
+/*
+Author - Sahil Bathla
+Description - Auto complete CSS
+*/
+
+
+p
+{
+  margin:0;
+}
+
+p:hover
+{
+  color:white;
+  background:grey;
+}
+
+#suggestionResults
+{
+  margin:0;
+  padding-bottom:10px;
+  width : 170px;  
+}
+
+input
+{
+  border: solid 1px black;
+}

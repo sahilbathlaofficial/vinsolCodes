@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta name="description" content="Auto Complete" />
+    <meta name="keywords" content="HTML,JavaScript,excercise,vinsol,sahil" />
+    <meta name="author" content="Sahil Bathla" />
+    <meta charset="UTF-8" />
+
+    <title> Auto Complete </title>
+
+    <script type="text/javascript" src="autoComplete.js"></script>
+    <link href="autoComplete.css" type="text/css" rel="stylesheet" />
+  
+  </head>
+
+  <body>
+    <form id="autoCompleteForm" action="_blank">
+      <input type="text" id="suggestBox" onkeyup="suggestName()" onfocus="suggestName()" onblur="clearResults()" /><br />
+      <div id="suggestionResults"></div>
+    </form>
+
+  </body>
+</html>

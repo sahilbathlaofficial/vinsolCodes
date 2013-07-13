@@ -9,7 +9,7 @@ function Form(form)
   this.form = form;
   this.textFields = document.getElementsByClassName('inputElement');
   this.aboutMe = document.getElementById('aboutMe');
-  this.notification = document.getElementById('notification');
+  this.notificationCheck = document.getElementById('notification');
   // flag to check if form is submitable or not 
   var flag = true;
   
@@ -37,10 +37,10 @@ function Form(form)
         flag = false;
       }
         
-      else if (this.notification.checked === false)
+      else if (this.notificationCheck.checked === false)
       {
-        alert(this.notification.name + " must be checked ");
-        this.checkBox.focus();
+        alert(this.notificationCheck.name + " must be checked ");
+        this.notificationCheck.focus();
         flag = false;
       }
              

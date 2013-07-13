@@ -1,18 +1,10 @@
-/*
-  Author - Sahil Bathla
-  Description - Number validation 
-  Version - 1.0
-*/
-
-// Class for Form
-
 function Names(person)
 {
   this.names = person;
   var suggestBox= document.getElementById('suggestBox');
   var resultBox= document.getElementById('suggestionResults');
   var flag = false;
-  this.suggest = function() 
+  this.suggest = function()
     {
       this.clearResult();
       flag = false;
@@ -59,10 +51,10 @@ function suggestName()
   persons.suggest();
 }
 
-function clearResults()
+window.onclick = function()
 {
-  persons.clearResult();
+  persons.clearResults();
 }
 
 
-  
+

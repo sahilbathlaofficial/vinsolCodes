@@ -1,0 +1,56 @@
+/*
+Author - Sahil Bathla
+Description - Auto complete CSS
+*/
+
+
+#mainGameFrame
+{
+  margin:auto;
+  margin-top:50px;
+  width:950px;
+  text-align:center;
+  color:white;
+}
+
+#startGame
+{
+background:red;
+border:2px solid white;
+border-radius:12px;
+color:white;
+padding:5px;
+}
+
+#timeRemaining
+{
+color:red;
+position:absolute;
+top:20px;
+right:100px;
+font-size :25px;
+font-weight:bold;
+}
+
+.box
+{
+  display:inline-block;
+  height:80px;
+  width:80px;
+  margin:5px;
+  border: 2px solid black;
+}
+
+#wrongGuess
+{
+position :absolute;
+top:5%;
+left:38%;
+visibility:hidden;
+color:red;
+font-size:30px;
+font-weight:800;
+width:300px;
+text-align:Center;
+border: 2px dotted red;
+}

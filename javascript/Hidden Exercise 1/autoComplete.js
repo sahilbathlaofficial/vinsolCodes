@@ -53,7 +53,7 @@ function suggestName()
 
 window.onclick = function()
 {
-  persons.clearResults();
+  persons.clearResult();
 }
 
 

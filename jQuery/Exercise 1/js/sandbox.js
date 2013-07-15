@@ -1,3 +1,22 @@
+/*
+Author - Sahil Bathla
+Description : -
+
+
+    Select all of the div elements that have a class of "module".
+
+    Come up with three selectors that you could use to get the third item in the #myList unordered list. Which is the best to use? Why?
+
+    Select the label for the search input using an attribute selector.
+
+    Figure out how many elements on the page are hidden
+
+    Figure out how many image elements on the page have an alt attribute.
+
+    Select all of the odd table rows in the table body.
+
+*/
+
 window.onload = function()
 {
 

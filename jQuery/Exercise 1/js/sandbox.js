@@ -17,7 +17,7 @@ Description : -
 
 */
 
-window.onload = function()
+$(document).ready(function()
 {
 
   // selected div of class module
@@ -43,6 +43,6 @@ window.onload = function()
   $('tbody tr:nth-child(2n+1)').css('background-color','yellow');
 
 
-}
+});
 
 

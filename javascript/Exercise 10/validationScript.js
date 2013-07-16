@@ -7,10 +7,11 @@ function regexCheck (element,regex)
 {
   if (!(regex).test(element.value))
   {
-  alert(element.previousSibling.textContent + " is not in proper format" );
-  element.focus();
-  return false;
+    alert(element.previousSibling.textContent + " is not in proper format" );
+    element.focus();
   }
+    return (regex).test(element.value);
+ 
 }
 
 
@@ -42,7 +43,7 @@ function Form(form)
       }
     }
 
-    if (flag === true)
+    if (flag)
     {
       if (this.textArea.value.length < 50)
       {
@@ -51,22 +52,17 @@ function Form(form)
         flag = false;
       }
         
-      else if (this.checkBox.checked === false)
+      else if (!this.checkBox.checked)
       {
         alert(this.checkBox.name + " must be checked ");
         this.checkBox.focus();
-        flag = false;
       }
              
-      else if (regexCheck(email,regexEmail) == false || regexCheck(homePage,regexURL) == false )
+      else if (regexCheck(email,regexEmail) && regexCheck(homePage,regexURL))
       {
-       flag = false;
+       this.form.submit();
       }
-    
-      else
-      {
-      this.form.submit();
-      }
+
     }   
   }
 }

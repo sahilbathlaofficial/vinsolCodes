@@ -59,44 +59,60 @@ gameHandler = function()
   }
 }
 
+// Class for Memory games to initialize game and play game
+function MemoryGame(rows,cols)
+{
+  
+  this.rows = rows;
+  this.cols = cols;
+
+  this.playGame = function()
+  {
+    for (i = 0;i < this.rows;i = i + 1)
+    {
+      matrixRow = document.createElement('div');
+      for (j = 0;j < this.cols;j = j + 1)
+      {
+        matrixCol = document.createElement('span');
+        matrixCol.setAttribute('class','box');
+        matrixCol.setAttribute('value',assignImage(rows*cols));
+        matrixCol.onclick = gameHandler;
+        matrixRow.appendChild(matrixCol);
+      }
+      document.getElementById('mainGameFrame').appendChild(matrixRow);
+    }
+    
+
+   //Time Remaining 
+    document.getElementById('timeRemaining').textContent = 'Time Remaining : ' + timeRemaining + ' secs';
+     window.setInterval(function()
+    {
+      if(timeRemaining === 0)
+      {
+        alert("Time Over!! You Lose");
+        window.close();
+      }
+      timeRemaining = timeRemaining - 1;
+      document.getElementById('timeRemaining').textContent = 'Time Remaining : ' + timeRemaining + ' secs';
+    },1000);
+  }
+   
+}
+
 
 
 function startGame(self)
 {
+  // jumbled images array  
   randomImageNumber = [];
+  // BOX OPENED IS THE ARRAY OF CURRENT AND PREVIOUS IMAGES OPENED
   imagesOpened = 0,boxOpened = [];
   proceed = true;
-  rows = 6, cols = 6;
   timeRemaining = 120;
-
-  for (i = 0;i < rows;i = i + 1)
-  {
-    matrixRow = document.createElement('div');
-    for (j = 0;j < cols;j = j + 1)
-    {
-      matrixCol = document.createElement('span');
-      matrixCol.setAttribute('class','box');
-      matrixCol.setAttribute('value',assignImage(rows*cols));
-      matrixCol.onclick = gameHandler;
-      matrixRow.appendChild(matrixCol);
-    }
-    document.getElementById('mainGameFrame').appendChild(matrixRow);
-  }
+  // hide start game button
   self.style.visibility = 'hidden';
-
- //Time Remaining 
-  document.getElementById('timeRemaining').textContent = 'Time Remaining : ' + timeRemaining + ' secs';
-   window.setInterval(function()
-  {
-    if(timeRemaining === 0)
-    {
-      alert("Time Over!! You Lose");
-      window.close();
-    }
-    timeRemaining = timeRemaining - 1;
-    document.getElementById('timeRemaining').textContent = 'Time Remaining : ' + timeRemaining + ' secs';
-  },1000);
-
+  var game = new MemoryGame(6,6);
+  game.playGame();
 }
 
 

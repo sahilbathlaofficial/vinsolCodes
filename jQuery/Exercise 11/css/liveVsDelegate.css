@@ -1,0 +1,19 @@
+.highlight
+{
+  background-color:yellow;
+}
+
+#container
+{
+  width:70%;
+  margin:auto;
+}
+
+#addItem
+{
+  margin:0;
+  display:inline-block;
+  position:absolute;
+  right :100px;
+}
+

@@ -6,10 +6,11 @@ Description : - Load Content with JSON
 $(document).ready(function()
 {
   // cache the JSON data into a variable dataJSON
-  $.getJSON('data/specials.json',function(data)
+  $.ajax({url: 'data/specials.json',dataType: 'json', success : function(data)
     {
       dataJSON = data;
-    }).done(function() { console.log( "success" ); }).fail(function() { console.log("error"); })
+    }}).done(function() { console.log( "success" ); }).fail(function() { console.log("error"); })
+
 
   // create target div  
   $('#specials form').after('<div id="targetDiv"></div>');

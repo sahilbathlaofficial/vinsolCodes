@@ -5,25 +5,21 @@ Description : - Load Content with JSON
 
 $(document).ready(function()
 {
-  counter = 1, id = '';
+  var counter = 1, id = '';
   $('#container').append('<input type="button"></input>');
   $('#container').append('<h2>Top of Stack</h2>');
   $('#container').children().eq(0).attr({id:'addItem',value:'Add Item'}).click( function()
   {
     id = "divStack" + counter;
-    $('#container').append('<div></div>').children().last().attr('id',id).text("New Stack Item");
+    itemText = "Stack Item #" + counter;
+    $('#container h2').after('<div></div>');
+    $('#container').children('div:first').attr('id',id).text(itemText);
     counter = counter + 1;
   });
 
-  $('#container').delegate('div:first','click',function() { console.log($(this)); $(this).remove(); });
-  $('#container').delegate('[id*="divStack"]','click',function() { $(this).toggleClass('highlight'); });
+  $('#container').delegate('div:first','click',function() {$(this).remove();});
+  $('#container').delegate('div','click',function() { $(this).toggleClass('highlight'); });
   
-
-
-
-  
-  
- 
 });
 
 

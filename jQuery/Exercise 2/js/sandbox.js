@@ -29,7 +29,7 @@ $(document).ready(function()
   $(':input[type="text"]').closest('form').addClass('addedNewClass');
 
   //remove and add class current to list items of #myList
-  $('#myList li[class*="current"]').removeClass('current').next().addClass('current');
+  $('#myList li[class="current"]').removeClass('current').next().addClass('current');
 
   //Select the select element inside #specials; traverse your way to the submit button
   $('#specials select').parents('#specials').find('input').css('background-color','red');

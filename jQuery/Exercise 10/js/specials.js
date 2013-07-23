@@ -19,10 +19,18 @@ $(document).ready(function()
 
   // On change add JSON Data corresponding to day
   $('#specials form select').bind('change',function() {
-  optionSelected = $('#specials form  option:selected').text().toLowerCase();
+    optionSelected = $('#specials form  option:selected').text().toLowerCase();
+  
+    if ( $('#specials form  option:selected').index() === 0 )
+    {
+      // html('') in case user selects the default (select) which is not in JSON data
+      $('#targetDiv').html('');
+    }
+    else
+    {
+    $('#targetDiv').html(dataJSON[optionSelected].title + '<br />' + dataJSON[optionSelected].text);  
+    }
 
-  // html('') in case user selects the default (select) which is not in JSON data
-  $('#targetDiv').html('').html(dataJSON[optionSelected].title + '<br />' + dataJSON[optionSelected].text);  
   });
   
  

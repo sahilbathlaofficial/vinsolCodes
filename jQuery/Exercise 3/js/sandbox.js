@@ -19,18 +19,18 @@ $(document).ready(function()
   $('#myList').append(listItems);
 
   // Remove the odd list items
-  $('ul li:odd').remove();
+  $('#mylist li:odd').remove();
 
   // Add another h2 and another paragraph to the last div.module
-  $('div.module').last().append('<h2>New Heading</h2>').append('<p>New Paragraph</p>');
+  $('div.module:last').append('<h2>New Heading</h2>').append('<p>New Paragraph</p>');
 
   // Add another option to the select element; give the option the value "Wednesday"
-  $('select').append('<option>Wednesday</option>').children().last().attr('value','Wednesday');
+  $('#day').append('<option value="Wednesday">Wednesday</option>');
 
   // Add a new div.module to the page after the last one; put a copy of one of the existing images inside of it. 
-  $('div.module').after('<div></div>').next().addClass('module');
-  lastDiv = $('div.module').last();
-  $('img').first().clone().appendTo(lastDiv);
+  $('div.module:last').after('<div></div>').next().addClass('module');
+  lastDiv = $('div.module:last');
+  $('img:first').clone().appendTo(lastDiv);
 
 });
 

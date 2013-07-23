@@ -12,10 +12,9 @@ $(document).ready(function()
   $('#blog h3').click( function(event) 
   {
     event.preventDefault();
-    $(this).nextAll('p').slideDown(500);
-     $('#blog h3').nextAll('p').not( $(this).nextAll('p')).slideUp(500);
+    $('#blog p:visible').slideUp(500);
+    $(this).next().slideDown(500);
   });
-
 
 });
 

@@ -159,6 +159,10 @@ body {
 	height: 30px;
 }
 
+#nav .hover
+{
+  display:block;
+}
 #nav li {
 	float: left;
 	padding: 15px;

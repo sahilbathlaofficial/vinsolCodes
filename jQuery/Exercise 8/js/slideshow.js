@@ -2,7 +2,27 @@
 Author - Sahil Bathla
 Description : - Slideshow
 */
-function slideShow()
+
+function previousSlide(event)
+{
+    flagPrevious = true;
+    // count = count - 2 as slideShow function will increment count by 1
+    count = count - 2;
+    // finish current animation 
+    slideShowElement.finish();
+    if(count === -1)
+    {
+      slideShowElement = slideShowElement.parent().children('li').last();
+      count = event.data.lengthOfSlideShow - 1;
+    }
+    else
+    {
+      slideShowElement = slideShowElement.prev();
+    }
+    slideShow(event.data.lengthOfSlideShow);
+}
+
+function slideShow(lengthOfSlideShow)
 {
   count = count + 1;
   navigationString = count + " of " + lengthOfSlideShow;
@@ -17,54 +37,39 @@ function slideShow()
     else if(count !== lengthOfSlideShow)
     {
       slideShowElement = slideShowElement.next();
-      slideShow(slideShowElement);
+      slideShow(lengthOfSlideShow);
     }
     else
     {
       slideShowElement = slideShowElement.parent().children('li').first();
       count = 0;
-      slideShow(slideShowElement);
+      slideShow(lengthOfSlideShow);
     }
   });
 }
 
 $(document).ready(function()
 {
-  count = 0; lengthOfSlideShow = $('#slideshow li').length,flagPrevious = false;
-  slideShowElement = $('#slideshow li').first();
+  var lengthOfSlideShow = $('#slideshow li').length;
+
+  // some global variables which are required in onClick event & are in the recursive callback of fadeOUT
+  count = 0,flagPrevious = false,slideShowElement = $('#slideshow li').first();
 
   //prepend slideshow
-  $('body').prepend($('#slideshow'));
-  
-  //navigation panel
-  $('#slideshow').append('<div id="navSlides"><span id="previous">&lt; Previous </span><span id="pages"></span><span id="next"> Next ></span></div>');
+  $('body').prepend($('#slideshow').append('<div id="navSlides"><span id="previous">&lt; Previous </span><span id="pages"></span>' +
+  '<span id="next"> Next ></span></div>'));
     
-  //fadein fadeout listitems
   $('#slideshow li').hide();
-  slideShow(slideShowElement);
 
-  //previous
-  $('#previous').click( function() 
+  slideShow(lengthOfSlideShow);
+
+  //previous navigation
+  $('#previous').bind('click',{lengthOfSlideShow:lengthOfSlideShow},function(event) 
   {
-    flagPrevious = true;
-    // count = count - 2 as slideShow function will increment count by 1
-    count = count - 2;
-    // finish current animation 
-    slideShowElement.finish();
-    if(count === -1)
-    {
-      slideShowElement = slideShowElement.parent().children('li').last();
-      count = lengthOfSlideShow - 1;
-    }
-    else
-    {
-      slideShowElement = slideShowElement.prev();
-    }
-    slideShow(slideShowElement);
+    previousSlide(event);
   });
 
-  //next implementation not done as the slide show automatically shows the next slide
- 
+  //next implementation not done as the slide show automatically shows the next slide 
 });
 
 

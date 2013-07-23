@@ -31,8 +31,11 @@ $(document).ready(function()
   // Bind a focus event to the search input that removes the hint text and the "hint" class
   $(':input[name="q"]').bind('focus blur',function() 
   {
-    $(this).val(toggleValue($(this).val(),hintText));
-    $(this).toggleClass('hint');
+    if ($(this).val().trim() === '' || $(this).val() === hintText)
+    {
+      $(this).val(toggleValue($(this).val(),hintText));
+      $(this).toggleClass('hint');
+    }
   });
 });
 

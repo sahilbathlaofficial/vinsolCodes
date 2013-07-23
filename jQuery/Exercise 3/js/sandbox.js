@@ -14,12 +14,12 @@ $(document).ready(function()
   var listItems = '', maxListItems = 5,lastDiv;
   for (i = 0;i < maxListItems;i = i + 1)
   {
-    listItems = listItems + '<li> New List Item </li>';
+    listItems = listItems + '<li> New List Item ' + i + '</li>';
   } 
   $('#myList').append(listItems);
 
   // Remove the odd list items
-  $('#mylist li:odd').remove();
+  $('#myList li:nth-child(2n+1)').remove();
 
   // Add another h2 and another paragraph to the last div.module
   $('div.module:last').append('<h2>New Heading</h2>').append('<p>New Paragraph</p>');

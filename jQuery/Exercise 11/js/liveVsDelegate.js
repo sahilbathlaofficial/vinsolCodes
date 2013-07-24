@@ -8,7 +8,7 @@ $(document).ready(function()
   var counter = 1, id = '';
   $('#container').append('<input type="button" id="addItem" value="Add Item"></input>');
   $('#container').append('<h2>Top of Stack</h2>');
-  $('#container :nth-child(1)').click( function()
+  $('#addItem').click( function()
   {
     divClass = "divStack";
     itemText = "Stack Item #" + counter;

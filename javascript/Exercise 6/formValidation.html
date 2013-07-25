@@ -22,10 +22,10 @@
       <div id="formHeader">
         <p>Registeration Form</p>
       </div>
-      <form id="validationForm" action="sampleSubmit.html">
-      <span class="formText">Login Id</span><input type="text" id="loginId" name="loginId" class="formFields" /><br />
-      <span class="formText">Email</span><input type="email" id="email" name="email" class="formFields" /><br />
-      <span class="formText">Name</span><input type="text" id="nameOfPerson" name="nameOfPerson" class="formFields" /><br />
+      <form id="registerationForm" action="sampleSubmit.html">
+      <span class="formText">Login Id</span><input type="text" id="loginId" name="loginId" class="registerFormTextFields" /><br />
+      <span class="formText">Email</span><input type="email" id="email" name="email" class="registerFormTextFields" /><br />
+      <span class="formText">Name</span><input type="text" id="nameOfPerson" name="nameOfPerson" class="registerFormTextFields" /><br />
       <span class="formText">Timezone</span>
       <select id="timeZone" name="timeZone" />
         <option value="GMT">GMT</option>
@@ -33,8 +33,9 @@
         <option value="EST">EST</option>
         <option value="PST">PST</option>
       </select><br />
-      <span class="formText">Home Page</span><input type="text" id="homePage" name="homePage" class="formFields" /><br />
-      <span class="formText">About me</span><textarea id="aboutMe" name="aboutMe" rows="10" cols="20" class="formFields" ></textarea><br />
+      <span class="formText">Home Page</span><input type="text" id="homePage" name="homePage" class="registerFormTextFields" /><br />
+      <span class="formText">About me</span><textarea id="aboutMe" name="aboutMe" rows="10" cols="20" class="registerFormTextFields" >
+        </textarea><br />
       <input type="checkbox" name="notification" id="notification">
       <label for="notification">
         <span id="notificationText">Receive notification of comments</span>

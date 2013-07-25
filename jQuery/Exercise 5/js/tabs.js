@@ -21,25 +21,21 @@ $(document).ready(function()
   // Hide all of the modules
   $('.module').hide();
   //Create an unordered list element before the first module.
-  $('.module').first().before('<ul id="moduleList"></ul>');
+  $('.module:first').before('<ul id="moduleList"></ul>');
   //Iterate over the modules using $.fn.each.ext of the h2 element as the text for a list item that you add to the unordered list element.
   $('.module h2').each(function()
   {
-    headingString = headingString + '<li>' + $(this).text() + '</li>';
+    $('#moduleList').append('<li ref="' + $(this).parent().attr('id') + '">' + $(this).text() + '</li>');
   });
-  $('#moduleList').html(headingString);
-  //Bind events
+  //bind on click function to show corresponding data
   $('#moduleList li').bind('click',function()
   {
-    elementToShow = '#' + $(this).text().toLowerCase();
-    $('.module').not(elementToShow).hide();
-    $(elementToShow).show();
-    
-    $('#moduleList li').not(this).removeClass('current');
-    $(this).addClass('current');  
+    elementToShow = '#' + $(this).attr('ref');
+    $(elementToShow).show().siblings('.module').hide();
+    $(this).addClass('current').siblings().removeClass('current');
   });
   //Showing the first tab
-  $('.module').first().show();
+  $('.module:first').show();
 });
 
 

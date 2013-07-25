@@ -25,7 +25,7 @@ $(document).ready(function()
   $('div.module:last').append('<h2>New Heading</h2>').append('<p>New Paragraph</p>');
 
   // Add another option to the select element; give the option the value "Wednesday"
-  $('#day').append('<option value="Wednesday">Wednesday</option>');
+  $('select[name="day"]').append('<option value="Wednesday">Wednesday</option>');
 
   // Add a new div.module to the page after the last one; put a copy of one of the existing images inside of it. 
   $('div.module:last').after('<div class="module"></div>').next().append($('img:first').clone());

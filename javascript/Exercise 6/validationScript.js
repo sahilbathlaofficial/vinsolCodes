@@ -7,7 +7,7 @@
 function Form(form)
 {
   this.form = form;
-  this.textFields = document.getElementsByClassName('inputElement');
+  this.textFields = document.getElementsByClassName('formFields');
   this.aboutMe = document.getElementById('aboutMe');
   this.notificationCheck = document.getElementById('notification');
   // flag to check if form is submitable or not 
@@ -55,7 +55,7 @@ function Form(form)
 
 var formHandler = function ()
 {
-  var form = new Form (document.forms[0]);
+  var form = new Form (document.getElementById('validationForm'));
   form.validate();
 }
 

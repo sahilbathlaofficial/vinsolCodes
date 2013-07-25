@@ -10,26 +10,30 @@ Description : -
 
 $(document).ready(function()
 {
-  var hintText = $('label[for="q"]').text();
+
+  //Remove the label element but save its text
+  var hintText = $('label[for="q"]').remove().text();
+
   /*Set the value of the search input to the text of the label element 
     Add a class of "hint" to the search input
     Bind a focus event to the search input that removes the hint text and the "hint" class
   */
-  $(':input[name="q"]').val(hintText).addClass('hint').bind('focus blur',function() 
+
+   $('.input_text').val(hintText).addClass('hint').bind('focus',function() 
   {
-      if ($(this).hasClass('hint'))
+    if($(this).hasClass('hint')) 
+    {
+      $(this).val('').removeClass('hint');  
+    }
+
+  }).bind('blur',function() 
+  {
+      if($(this).val().trim().length === 0)
       {
-        $(this).val('');
-        $(this).removeClass('hint');  
-      }
-      else if( $(this).val().trim().length === 0)
-      {
-        $(this).val(hintText);
-        $(this).addClass('hint'); 
+        $(this).val(hintText).addClass('hint'); 
       }
   });
-  //Remove the label element
-  $('label[for="q"]').remove();
+
  
 });
 

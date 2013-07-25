@@ -21,7 +21,7 @@ function Form(form)
       
       if (this.textFields[i].value === '' || this.textFields[i].value.trim().length === 0)
       {
-        alert(this.textFields[i].previousSibling.textContent + " can not be empty" );
+        alert(this.textFields[i].name + " can not be empty" );
         this.textFields[i].focus();
         flag = false;
         break;

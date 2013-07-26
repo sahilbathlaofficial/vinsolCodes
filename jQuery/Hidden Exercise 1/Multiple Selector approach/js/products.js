@@ -5,24 +5,51 @@ Description : - Load Content with JSON
 
 //filtering results based on Brands Colors and availabilty
 
-function filterBy(filter)
+function filterByColor(currentBrand)
 {
-  var filterSelector = '';
-  if( $('#filter' + filter + ' input:checked').length > 0)
+  var overallSelector = '', color = '';
+  $('#filterColors :checked').each( function()
   {
-    $('#filter' + filter + ' :input').not(':checked').each( function()
-    {
-      filterSelector = '[data-' + filter.toLowerCase() + '="' + $(this).attr("data-value") + '"]';
-      $(filterSelector).hide();
-    });
-  }
+    color = '[data-color="' + $(this).attr("data-value") + '"],';
+    overallSelector = overallSelector + currentBrand +  color ;
+  });
+  return (overallSelector);
+
 }
 function filter()
 {
-  filterBy('Brand');
-  filterBy('Color');
+   
+  var selectorString = '',brand = '' ;
+  
+  if ($('#filterBrands :checked').length > 0)
+  {
+    $('#filterBrands :checked').each( function()
+    {
+      brand  =  '[data-brand="' + $(this).attr('data-value') + '"]';
+      if ($('#filterColors :checked').length !== 0)
+      {
+        selectorString = selectorString + filterByColor(brand); 
+      }
+      else
+      {
+        selectorString = selectorString + brand + ','; 
+      }
+    });
+  }
+  else
+  {
+    if ($('#filterColors :checked').length > 0)
+    {
+      selectorString = filterByColor(selectorString);
+    }
+  }
+
+  selectorString = selectorString.slice(0,-1);
+  // view the multiple selector string formed
+  console.log(selectorString);
+  $('#container img' + selectorString).show();
   //filter by availibility
-  if( $('#available').prop('checked') )
+  if( $('#available:checked').length > 0 )
   {
     $('#container img[sold_out="1"]').hide();
   } 
@@ -32,9 +59,9 @@ $(document).ready(function()
 {
 
   var brands = '<p>Brand Name</p>',
-      brand = '',
+      brandID = '',
       brandColors = '<p>Brand Color</p>',
-      color = '';
+      brandColor = '';
 
   // cache the JSON data into a variable dataJSON
   $.ajax({url: 'data/product.json',dataType: 'json', success : function(data)
@@ -66,11 +93,11 @@ $(document).ready(function()
       }
 
       // append brands and color filers and add event handlers
-      $('#filterBrand').html(brands);
-      $('#filterColor').html(brandColors);
+      $('#filterBrands').html(brands);
+      $('#filterColors').html(brandColors);
       $('#leftPanel').delegate('input','click',function() 
       {
-        $('#container img').show();
+        $('#container img').hide();
         filter();
       });
     }}).done(function() { console.log( "success" ); }).fail(function() { console.log("error"); });

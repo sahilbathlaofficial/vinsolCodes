@@ -1,0 +1,37 @@
+#container
+{
+  width:800px;
+  margin-left:300px;
+}
+
+#leftPanel
+{
+  float:left;
+}
+img
+{
+  height:150px;
+  width:150px;
+  margin: 4px;
+}
+
+p
+{
+  font-size: 14px;
+  color: Grey;
+  text-decoration:underline;
+  font-style:italic;
+  margin-left:10px;
+}
+
+input
+{
+   margin-left:20px;
+}
+
+label
+{
+ font-size: 12px; 
+}
+
+

@@ -5,20 +5,20 @@ Description : - AJAX Load
 
 $(document).ready(function()
 {
-  $('#blog h3').each( function(){
-  $(this).after('<div></div>');
-  var reference = $(this).next();
-  $.data(this,'ref', reference); 
+  var targetURL = '';
+  $('#blog h3').each( function(index)
+  {
+    $(this).after('<div></div>');
+    var reference = $(this).next();
+    $.data(this,'ref',reference); 
 
-    $(this).click( function(event)
-    {
-      event.preventDefault();
-      target = 'data/'+ $(this).children('a').attr('href');
-      $.data(this,'ref').load(target);
-    });
-
-  });
- 
+  }).click( function(event)
+      {
+        event.preventDefault();
+        targetURL = $(this).children('a:first').attr('href');
+        targetURL = 'data/'+ target.replace('#',' #');
+        $.data(this,'ref').load(target);
+      })
 });
 
 

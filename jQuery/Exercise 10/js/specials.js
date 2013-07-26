@@ -3,32 +3,41 @@ Author - Sahil Bathla
 Description : - Load Content with JSON
 */
 
+function doJSONAjax() {
+    var result="";
+    $.ajax({url: 'data/specials.json',dataType: 'json',async :false, success : function(data)
+    {
+        result = data;
+    }}).done(function() { console.log( "success" ); }).fail(function() { console.log("error"); });
+   return result;
+}
+
 $(document).ready(function()
 {
   var dataJSON = []
   var optionSelected = '';
-  // cache the JSON data into a variable dataJSON
-  $.ajax({url: 'data/specials.json',dataType: 'json', success : function(data)
-    {
-      dataJSON = data;
-    }}).done(function() { console.log( "success" ); }).fail(function() { console.log("error"); })
-
-
+ 
   // create target div  & remove submit form 
   $('#specials form').after('<div id="targetDiv"></div>').find(':input[type="submit"]').parent().remove();
 
   // On change add JSON Data corresponding to day
-  $('#specials form select').bind('change',function() {
-    optionSelected = $('#specials form  option:selected').text().toLowerCase();
-  
-    if ( $('#specials form  option:selected').index() === 0 )
+  $('#specials form select').bind('change',function() 
+  {
+    if(dataJSON.length === 0)
     {
-      // html('') in case user selects the default (select) which is not in JSON data
+      // cache the JSON data into a variable dataJSON (length now would be undefined or >0 instead of 0)
+      dataJSON = doJSONAjax();
+    }
+    // get the option selected
+    optionSelected = $(this).val();
+    // put the values in the target div
+    if ( dataJSON[optionSelected] === undefined )
+    {
       $('#targetDiv').html('');
     }
     else
     {
-    $('#targetDiv').html(dataJSON[optionSelected].title + '<br />' + dataJSON[optionSelected].text);  
+      $('#targetDiv').html(dataJSON[optionSelected].title + '<br />' + dataJSON[optionSelected].text);  
     }
 
   });

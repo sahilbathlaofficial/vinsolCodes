@@ -17,7 +17,7 @@ $(document).ready(function()
         event.preventDefault();
         targetURL = $(this).children('a:first').attr('href');
         targetURL = 'data/'+ target.replace('#',' #');
-        $.data(this,'ref').load(target);
+        $.data(this,'ref').load(targetURL);
       })
 });
 

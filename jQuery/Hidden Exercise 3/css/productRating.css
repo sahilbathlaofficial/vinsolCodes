@@ -1,0 +1,55 @@
+#container
+{
+  width:1000px;
+  margin-left:300px;
+  margin-top:200px;
+}
+
+#productList
+{
+  float:left;
+  margin-top:20px;
+}
+.products
+{
+  margin-top:28px;
+  padding:6px;
+  color:#5e6364;
+  font-size:22px;
+  font-weight:600;
+  font-family:arial;
+}
+
+.ratings
+{
+  width:100px;
+  display:inline-block;
+  margin-left:50px;
+  padding-right:20px;
+  border-right: 1px solid #dcdcdc;
+  color:#5e6364;
+  font-size:22px;
+  font-weight:600;
+  font-family:arial;
+  float:left;
+}
+
+.ratings:last-child
+{
+  border-right:none;
+}
+
+input[type="radio"]
+{
+  margin-top:42px;
+  margin-left:20px;
+}
+
+
+
+
+
+.highlight
+{
+  background-color:#dce4ec;
+}

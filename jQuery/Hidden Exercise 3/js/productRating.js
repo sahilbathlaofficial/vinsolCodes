@@ -28,7 +28,7 @@ function createDiv(item,itemClass)
 
 $(document).ready( function()
 {
-  var ratingHTML = '',checkedProduct = '',checkedRating = '',selectedRadio = {};
+  var ratingHTML = '',checkedProduct = '',checkedRating = '',selectedRadio = {},product = {};
   var products =['Coffee','Tea','Sodas'];
   var ratings = ['Love it','Like it','No Views','Dislike it','Abhor it'];
   if(products.length > 0)
@@ -37,21 +37,30 @@ $(document).ready( function()
    $('#container').append(createDiv(ratings,'ratings'));
    createRadioButtons(ratings,products)
   }
-  $('#container').delegate('.products,.ratings','click',function() {
-    if ($(this).hasClass('products'))
+  // on product click
+  $('#container').delegate('.products','click',function() {
+    $('.products span, .ratings span').removeClass('highlight');
+    checkedProduct = $(this).attr('data-products');
+    // if choosen product already rated highlight the rating he gave earlier 
+    product = $('[data-productValue="' + checkedProduct + '"]:checked');
+    if ( product.length === 1)
     {
-      $('.products span').removeClass('highlight');
-      $(this).children('span').eq(0).addClass('highlight');
+      $('[data-ratings = "' + product.attr("data-ratingValue") + '"] span').addClass('highlight');
     }
-    else if ($(this).hasClass('ratings'))
-    {
+    $(this).children('span').eq(0).addClass('highlight');
+  });
+  // on rating click
+  $('#container').delegate('.ratings','click',function() {
+    if(checkedProduct !== '')
+      {
+      checkedRating = $(this).attr('data-ratings');
       $('.ratings span').removeClass('highlight');
       $(this).children('span').eq(0).addClass('highlight');
-    }
-    if( $('.products .highlight').length === 1 && $('.ratings .highlight').length === 1)
-    alert('yo');
+      $('[data-productValue="' + checkedProduct + '"]').prop('checked',false);
+      $('[data-ratingValue="' + checkedRating + '"][data-productValue="' + checkedProduct + '"]').prop('checked',true);
+      }
   });
-
+  // on radio button clicked
   $('#container').delegate(':input[type="radio"]','change', function(event) {
     selectedRadio = $(this);
     checkedRating = $(selectedRadio).attr('data-ratingValue');

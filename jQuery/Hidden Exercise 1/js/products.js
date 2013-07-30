@@ -12,7 +12,7 @@ function filterBy(filter)
   {
     $('#filter' + filter + ' :input').not(':checked').each( function()
     {
-      filterSelector = '[data-' + filter.toLowerCase() + '="' + $(this).attr("data-value") + '"]';
+      filterSelector = '[data-' + filter.toLowerCase() + '="' + $(this).val() + '"]:visible';
       $(filterSelector).hide();
     });
   }
@@ -24,7 +24,7 @@ function filter()
   //filter by availibility
   if( $('#available').prop('checked') )
   {
-    $('#container img[sold_out="1"]').hide();
+    $('#container img[data-sold-out="1"]').hide();
   } 
 }
 
@@ -49,18 +49,18 @@ $(document).ready(function()
         color = dataJSON[i].color;
     
         $('#container').append('<img></img>').children().last().attr('src',url).attr({"data-brand":brand,"data-color":color})
-        .attr('sold_out',dataJSON[i]["sold_out"]);
+        .attr('data-sold-out',dataJSON[i]["sold_out"]);
 
         //create filters by brand
         if(brands.indexOf(dataJSON[i].brand) === -1)
         {
-          brands = brands + '<input type="checkbox" data-value="' + brand + '" /><label for="' + brand + '" >' + brand +
+          brands = brands + '<input type="checkbox" value="' + brand + '" /><label for="' + brand + '" >' + brand +
           '</label><br />';
         }
         //create filters by color
         if(brandColors.indexOf(dataJSON[i].color) === -1)
         {
-          brandColors = brandColors + '<input type="checkbox" data-value="' + color + '" /><label for="' + color + '" >' +
+          brandColors = brandColors + '<input type="checkbox" value="' + color + '" /><label for="' + color + '" >' +
           color + '</label><br />';
         }
       }

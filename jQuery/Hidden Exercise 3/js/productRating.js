@@ -61,7 +61,8 @@ $(document).ready( function()
       }
   });
   // on radio button clicked
-  $('#container').delegate(':input[type="radio"]','change', function(event) {
+  $('#container').delegate(':input[type="radio"]','click', function(event) {
+    event.stopPropagation();
     selectedRadio = $(this);
     checkedRating = $(selectedRadio).attr('data-ratingValue');
     checkedProduct = $(selectedRadio).attr('data-productValue');

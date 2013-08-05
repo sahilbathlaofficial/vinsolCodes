@@ -1,0 +1,81 @@
+CREATE DATABASE sandwiches;
+
+USE sandwiches;
+
+DROP TABLE IF EXISTS tastes;
+CREATE TABLE tastes
+(
+  name varchar(200),
+  filling varchar(200),
+  PRIMARY KEY(name,filling)
+);
+LOCK TABLES tastes WRITE;
+INSERT INTO tastes values('Brown','Turkey');
+INSERT INTO tastes values('Brown','Beef');
+INSERT INTO tastes values('Brown','Ham');
+INSERT INTO tastes values('Jones','Cheese');
+INSERT INTO tastes values('Green','Beef');
+INSERT INTO tastes values('Green','Turkey');
+INSERT INTO tastes values('Green','Cheese');
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS locations;
+CREATE TABLE locations
+(
+  lname varchar(200),
+  phone int(9),
+  address text,
+  PRIMARY KEY(lname)
+);
+LOCK TABLES locations WRITE;
+INSERT INTO locations values('Lincoln',6834523,'Lincoln Place');
+INSERT INTO locations values('O\'Neill\'s',6742134,'Pearse St');
+INSERT INTO locations values('Old Nag',7678132,'Dame St');
+INSERT INTO locations values('Buttery',7023421,'College St'); 
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS sandwiches;
+CREATE TABLE sandwiches
+(
+  location varchar(200) REFERENCES locations.lname,
+  bread varchar(200),
+  filling varchar(200),
+  price float(20),
+  PRIMARY KEY(location,bread,filling)
+);
+LOCK TABLES sandwiches WRITE;
+INSERT INTO sandwiches values('Lincoln','Rey','Ham',1.25);
+INSERT INTO sandwiches values('O\'Neill\'s','White','Cheese',1.20);
+INSERT INTO sandwiches values('O\'Neill\'s','Whole','Ham',1.25);
+INSERT INTO sandwiches values('Old Nag','Rey','Beef',1.35);
+INSERT INTO sandwiches values('Buttery','White','Cheese',1.00);
+INSERT INTO sandwiches values('O\'Neill\'s','White','Turkey',1.35);
+INSERT INTO sandwiches values('Buttery','White','Ham',1.15);
+INSERT INTO sandwiches values('Lincoln','Rey','Beef',1.35);
+INSERT INTO sandwiches values('Lincoln','White','Ham',1.30);
+INSERT INTO sandwiches values('Old Nag','Rey','Ham',1.40);
+UNLOCK TABLES;
+
+DESCRIBE tastes;
+DESCRIBE sandwiches;
+DESCRIBE locations;
+
+#Selecting location for Jones using subquery
+
+SELECT location FROM sandwiches
+WHERE filling IN (SELECT filling FROM tastes WHERE name = 'Jones');
+
+#Selecting location for Jones  without using subquery 
+
+SELECT sandwiches.location from sandwiches 
+JOIN tastes
+WHERE tastes.filling = sandwiches.filling AND tastes.name = 'Jones';
+
+#Selecting locations with max users that can eat there
+SELECT sandwiches.location,count(DISTINCT tastes.name) from tastes
+JOIN sandwiches
+WHERE tastes.filling = sandwiches.filling
+GROUP BY sandwiches.location;
+ 
+
+

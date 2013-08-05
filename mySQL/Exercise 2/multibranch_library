@@ -1,0 +1,80 @@
+CREATE DATABASE multibranch_library;
+
+USE multibranch_library;
+
+DROP TABLE IF EXISTS Branch;
+CREATE TABLE Branch
+(
+  BCode varchar(2),
+  Librarian varchar(200),
+  Address text,
+  PRIMARY KEY(Bcode)
+);
+LOCK TABLES Branch WRITE;
+INSERT INTO Branch values('B1','John Smith','2 Angelesea Rd');
+INSERT INTO Branch values('B2','Mary Jones','34 Pearse St');
+INSERT INTO Branch values('B3','Francis Owens','Grange X');
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS Titles;
+CREATE TABLE Titles
+(
+  Title varchar(200),
+  Author varchar(200),
+  Publisher varchar(200),
+  PRIMARY KEY(Title)
+);
+LOCK TABLES Titles WRITE;
+INSERT INTO Titles values('Susannah','Ann Brown','Macmillan');
+INSERT INTO Titles values('How to Fish','Amy Fly','Stop Press');
+INSERT INTO Titles values('A History of Dublin','David Little','Wiley');
+INSERT INTO Titles values('Computers','Blaise Pascal','Applewoods');
+INSERT INTO Titles values('The Wife','Ann Brown','Macmillan');
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS Holdings;
+CREATE TABLE Holdings
+(
+  Branch varchar(2) REFERENCES Branch.Bcode,
+  Title varchar(200) REFERENCES Titles.Title,
+  copies int(10),
+  PRIMARY KEY(Branch,Title)
+);
+LOCK TABLES Holdings WRITE;
+INSERT INTO Holdings values('B1','Susannah',3);
+INSERT INTO Holdings values('B1','How to Fish',2);
+INSERT INTO Holdings values('B1','A History of Dublin',1);
+INSERT INTO Holdings values('B2','How to Fish',4);
+INSERT INTO Holdings values('B2','Computers',2);
+INSERT INTO Holdings values('B2','The Wife',3);
+INSERT INTO Holdings values('B3','A History of Dublin',1);
+INSERT INTO Holdings values('B3','Computers',4);
+INSERT INTO Holdings values('B3','Susannah',3);
+INSERT INTO Holdings values('B3','The Wife',1);
+UNLOCK TABLES;
+
+DESCRIBE Branch;
+DESCRIBE Titles;
+DESCRIBE Holdings;
+
+ 
+#names of all library books published by Macmillan.
+
+SELECT Title from Titles 
+WHERE Publisher = 'Macmillan';
+
+#branches that hold any books by Ann Brown (using a nested subquery).
+
+SELECT DISTINCT Branch from Holdings
+WHERE Title IN(SELECT Title from Titles where Author = 'Ann Brown');
+
+#branches that hold any books by Ann Brown (without using a nested subquery).
+
+SELECT DISTINCT Holdings.Branch from Holdings
+JOIN Titles 
+WHERE Holdings.Title = Titles.title AND Author = 'Ann Brown';
+
+#the total number of books held at each branch.
+SELECT Branch,Count(*) AS 'Number OF BOOKS' from Holdings
+GROUP BY Branch;
+

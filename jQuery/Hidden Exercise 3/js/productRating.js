@@ -50,14 +50,14 @@ $(document).ready( function()
     $(this).children('span').eq(0).addClass('highlight');
   });
   // on rating click
-  $('#container').delegate('.ratings','click',function() {
+  $('#container').delegate('.ratings span','click',function() {
     if(checkedProduct !== '')
       {
-      checkedRating = $(this).attr('data-ratings');
-      $('.ratings span').removeClass('highlight');
-      $(this).children('span').eq(0).addClass('highlight');
-      $('[data-productValue="' + checkedProduct + '"]').prop('checked',false);
-      $('[data-ratingValue="' + checkedRating + '"][data-productValue="' + checkedProduct + '"]').prop('checked',true);
+        checkedRating = $(this).parent().attr('data-ratings');
+        $('.ratings span').removeClass('highlight');
+        $(this).addClass('highlight');
+        $('[data-productValue="' + checkedProduct + '"]').prop('checked',false);
+        $('[data-ratingValue="' + checkedRating + '"][data-productValue="' + checkedProduct + '"]').prop('checked',true);
       }
   });
   // on radio button clicked

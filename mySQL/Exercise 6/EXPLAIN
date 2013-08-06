@@ -1,0 +1,116 @@
+Q.1 What do different columns in the output of EXPLAIN mean? What possible values can those have? What is the meaning of those values?
+
+ANS : -
+
+Column        |	    Meaning
+
+id	          |   The SELECT identifier
+select_type   | 	The SELECT type
+table         |	  The table for the output row
+partitions    |	  The matching partitions
+type	        |   The join type
+possible_keys |	  The possible indexes to choose
+key	          |   The index actually chosen
+key_len	      |   The length of the chosen key
+ref	          |   The columns compared to the index
+rows        	|   Estimate of rows to be examined
+filtered      |   Percentage of rows filtered by table condition
+Extra         | 	Additional information
+
+Q2: We use EXPLAIN to optimize slow SQL queries used in our application. Lets say we have a comments table in our application that has a foreign key, user_id, referencing to users table. EXPLAINing the query that finds all the comments made by a user gives us following result.
+
+mysql> EXPLAIN SELECT * FROM comments WHERE user_id = 41;
+
++-------------+------+---------------+---------+-------+---------+-------------+
+| select_type | type | key | key_len | ref | rows | Extra |
++-------------+------+---------------+---------+-------+---------+-------------+
+| SIMPLE | ALL | NULL | NULL | NULL | 1002345 | Using where |
++-------------+------+---------------+---------+-------+---------+-------------+
+
+mysql> SELECT count(id) FROM comments;
+
++-----------+
+| count(id) |
++-----------+
+| 1002345 |
++-----------+
+
+2.1 The value under 'rows' column in the output of EXPLAIN query and SELECT query after it are same. What does it mean?
+
+2.2 Is the SELECT query optimal? If no, how do we optimize it?
+
+
+Ans: It means that we are scanning the whole table for a particular user_id which is not optimal. To make it optimal use UNIQUE INDEX or PRIMARY KEY on user_id.
+
+
+
+Q3. In Rails world, we have someting called polymorphic associations (http://guides.rubyonrails.org/association_basics.html#polymorphic-associations). Lets say in our web application, we can let users comment on photographs and articles. Some of rows in comments table are represented as following:
+
+mysql> SELECT * FROM comments LIMIT 5;
+
++----+------------------+----------------+---------+
+| id | commentable_type | commentable_id | user_id |
++----+------------------+----------------+---------+
+| 1 + Article | 1 | 1 |
++----+------------------+----------------+---------+
+| 2 + Photo | 1 | 1 |
++----+------------------+----------------+---------+
+| 3 + Photo | 2 | 2 |
++----+------------------+----------------+---------+
+| 4 + Photo | 2 | 2 |
++----+------------------+----------------+---------+
+| 5 + Article | 1 | 2 |
++----+------------------+----------------+---------+
+
+When we need to fetch comments of a user on a particular Article or Photo we form a query like:
+
+mysql> EXPLAIN SELECT * FROM comments WHERE commentable_id = 1 AND commentable_type = 'Article' AND user_id = 1;
+
++-------------+------+---------------+---------+-------+---------+-------------+
+| select_type | type | key | key_len | ref | rows | Extra |
++-------------+------+---------------+---------+-------+---------+-------------+
+| SIMPLE | ALL | NULL | NULL | NULL | 1000025 | Using where |
++-------------+------+---------------+---------+-------+---------+-------------+
+
+It seems that we do not have any index on any of the columns. And whole comments table is scanned to fetch those comments.
+
+3.1 We decide to index columns in comments table to optimize the SELECT query. What column(s) will you index in which order? Ask the exercise creator for a hint if you are confused.
+
+Ans : Assuming a user can make multiple comments, the index suitable for this type of query would be INDEX(user_id,commentable_id,commentable_type) as comment id is the primary search option which needs to be queried always and to improve performance and thus we should index it and secondary option is commentable_type which would divide the search into two categories Article and Photo Type increasing the speed;
+
+
+
+4.1 EXPLAIN a SELECT query against one of your databases which employs an INNER JOIN between two tables. What does the output look like? What does the values under different columns mean? Do you get only one row in EXPLAIN's output?
+4.2 Form the same select query in above question using a subquery instead of a JOIN. What does the EXPLAIN output look like now? Which query is better and why?
+
+
+ANS: 
+    mysql> Explain SELECT sandwiches.location from sandwiches 
+    -> JOIN tastes
+    -> WHERE tastes.filling = sandwiches.filling AND tastes.name = 'Jones';
++----+-------------+------------+-------+---------------+---------+---------+-------+------+---------------------------------------------+
+| id | select_type | table      | type  | possible_keys | key     | key_len | ref   | rows | Extra                                       |
++----+-------------+------------+-------+---------------+---------+---------+-------+------+---------------------------------------------+
+|  1 | SIMPLE      | tastes     | ref   | PRIMARY       | PRIMARY | 202     | const |    1 | Using where; Using index                    |
+|  1 | SIMPLE      | sandwiches | index | NULL          | PRIMARY | 606     | NULL  |    9 | Using where; Using index; Using join buffer |
++----+-------------+------------+-------+---------------+---------+---------+-------+------+---------------------------------------------+
+2 rows in set (0.00 sec)
+
+    mysql> EXPLAIN SELECT location FROM sandwiches
+    -> WHERE filling IN (SELECT filling FROM tastes WHERE name = 'Jones');
++----+--------------------+------------+--------+---------------+---------+---------+------------+------+--------------------------+
+| id | select_type        | table      | type   | possible_keys | key     | key_len | ref        | rows | Extra                    |
++----+--------------------+------------+--------+---------------+---------+---------+------------+------+--------------------------+
+|  1 | PRIMARY            | sandwiches | index  | NULL          | PRIMARY | 606     | NULL       |    9 | Using where; Using index |
+|  2 | DEPENDENT SUBQUERY | tastes     | eq_ref | PRIMARY       | PRIMARY | 404     | const,func |    1 | Using where; Using index |
++----+--------------------+------------+--------+---------------+---------+---------+------------+------+--------------------------+
+2 rows in set (0.00 sec)
+
+Join query is better as the select type is SIMPLE which means the result need to be fed to another query making the work of MYSQL heavier. Also the key length in case of JOIN is less than the subquery  as two times the PRIMARY KEY is referred in the subquery.
+
+
+
+
+
+
+

@@ -89,7 +89,7 @@ LIMIT 1;
 SELECT articles.article,comments.user FROM articles
 LEFT JOIN comments USING (article)
 GROUP BY articles.article
-HAVING COUNT(comments.user) > COUNT(DISTINCT comments.user);
+HAVING COUNT(comments.user) = COUNT(DISTINCT comments.user);
 
 
 

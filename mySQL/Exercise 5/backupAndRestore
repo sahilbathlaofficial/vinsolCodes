@@ -1,0 +1,4 @@
+#Backup
+mysqldump -u root -psahil sandwiches > sandwichesDump.sql
+#Restore
+mysql -u root -psahil restore < sandwichesDump.sql

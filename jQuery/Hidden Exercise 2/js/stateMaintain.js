@@ -25,6 +25,7 @@ $(window).load( function(event) {
         }
         else
         {
+          window.location.hash = window.location.hash.split('c')[0];
           // find index of this clicked a which has no further links
           window.location.hash = window.location.hash + 'c' + $(this).closest('.accordion').find('a').index($(this));
           $(this).addClass('selectedLink');

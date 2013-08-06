@@ -1,0 +1,99 @@
+CREATE DATABASE user_articles;
+
+USE user_articles;
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users
+(
+  name varchar(200),
+  type ENUM('admin','normal'),
+  PRIMARY KEY(name)
+);
+LOCK TABLES users WRITE;
+INSERT INTO users values('sahil','admin');
+INSERT INTO users values('jatin','normal');
+INSERT INTO users values('akhil','admin');
+INSERT INTO users values('pramod','admin');
+INSERT INTO users values('divya','normal');
+INSERT INTO users values('ankit','normal');
+INSERT INTO users values('rahul','normal');
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS articles;
+CREATE TABLE articles
+(
+  username varchar(200) REFERENCES users.name,
+  article varchar(255),
+  category varchar(100),
+  PRIMARY KEY(username,article)
+);
+LOCK TABLES articles WRITE;
+INSERT INTO articles values('sahil','Yeh Jawani Hai Deewani','Bollywood');
+INSERT INTO articles values('pramod','Silent Keeper','Fiction');
+INSERT INTO articles values('akhil','JS flaws','Web Tech');
+INSERT INTO articles values('jatin','Big Bang Theory','Science'); 
+INSERT INTO articles values('sahil','Greatest Footballer','Sports');
+INSERT INTO articles values('divya','Atomic Number','Science');
+INSERT INTO articles values('ankit','Jeta Speed','Cars');
+INSERT INTO articles values('rahul','F Man','TV Series');
+UNLOCK TABLES;
+
+DROP TABLE IF EXISTS comments;
+CREATE TABLE comments
+(
+  id int(255) AUTO_INCREMENT,
+  user varchar(200) REFERENCES users.name,
+  article text REFERENCES articles.article,
+  comment text,
+  PRIMARY KEY(id)
+);
+LOCK TABLES comments WRITE;
+INSERT INTO comments(user,article,comment) values('pramod','Yeh Jawani Hai Deewani','What\'s the meaning of this');
+INSERT INTO comments(user,article,comment) values('sahil','JS flaws','Nice info sir');
+INSERT INTO comments(user,article,comment) values('jatin','JS flaws','It was of great help');
+INSERT INTO comments(user,article,comment) values('divya','JS flaws','Page 3 really helped in the exercise');
+INSERT INTO comments(user,article,comment) values('rahul','JS flaws','It is too length :(');
+INSERT INTO comments(user,article,comment) values('ankit','JS flaws','Next book please');
+INSERT INTO comments(user,article,comment) values('sahil','Big Bang Theory','I thought you were talking about the series :P');
+INSERT INTO comments(user,article,comment) values('sahil','Jeta Speed','Awsum article');
+INSERT INTO comments(user,article,comment) values('rahul','Atomic Number','Why this?');
+INSERT INTO comments(user,article,comment) values('pramod','Jeta Speed','I have Jeta, anyone interested in a ride');
+INSERT INTO comments(user,article,comment) values('jatin','Silent Keeper','Nice read');
+INSERT INTO comments(user,article,comment) values('sahil','Silent Keeper','Dito');
+INSERT INTO comments(user,article,comment) values('sahil','Silent Keeper','I mean same');
+UNLOCK TABLES;
+
+DESCRIBE users;
+DESCRIBE comments;
+DESCRIBE articles;
+
+#Assuming user3 is 'akhil'
+SELECT username,article FROM articles WHERE username = 'akhil';
+
+#Finding comments associated with above query
+SELECT articles.article AS 'Article By' ,comments.user AS 'Commented By',comments.comment FROM articles
+JOIN comments
+WHERE articles.article = comments.article and articles.username = 'akhil';
+
+#Articles with no comments
+SELECT article AS 'Articles Not commented on' FROM articles
+WHERE article NOT IN (SELECT article FROM comments);
+
+#Articles with max comments
+SELECT article,COUNT(comment) AS MAX_COMMENTS FROM comments
+GROUP BY article
+ORDER BY MAX_COMMENTS DESC
+LIMIT 1;
+
+#Article which does not have more than one comment by the same user
+SELECT articles.article,comments.user FROM articles
+LEFT JOIN comments USING (article)
+GROUP BY articles.article
+HAVING COUNT(comments.user) > COUNT(DISTINCT comments.user);
+
+
+
+
+ 
+
+

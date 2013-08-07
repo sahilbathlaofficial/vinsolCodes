@@ -52,7 +52,8 @@ CREATE TABLE `sandwiches` (
   `bread` varchar(200) NOT NULL DEFAULT '',
   `filling` varchar(200) NOT NULL DEFAULT '',
   `price` float DEFAULT NULL,
-  PRIMARY KEY (`location`,`bread`,`filling`)
+  PRIMARY KEY (`location`,`bread`,`filling`),
+  CONSTRAINT `sandwiches_ibfk_1` FOREIGN KEY (`location`) REFERENCES `locations` (`lname`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -62,7 +63,7 @@ CREATE TABLE `sandwiches` (
 
 LOCK TABLES `sandwiches` WRITE;
 /*!40000 ALTER TABLE `sandwiches` DISABLE KEYS */;
-INSERT INTO `sandwiches` VALUES ('Buttery','White','Cheese',1),('Buttery','White','Ham',1.15),('Lincoln','Rey','Beef',1.35),('Lincoln','White','Ham',1.3),('O\'Neill\'s','White','Cheese',1.2),('O\'Neill\'s','White','Turkey',1.35),('O\'Neill\'s','Whole','Ham',1.25),('Old Nag','Rey','Beef',1.35),('Old Nag','Rey','Ham',1.4);
+INSERT INTO `sandwiches` VALUES ('Buttery','White','Cheese',1),('Buttery','White','Ham',1.15),('Lincoln','Rey','Beef',1.35),('Lincoln','Rey','Ham',1.25),('Lincoln','White','Ham',1.3),('O\'Neill\'s','White','Cheese',1.2),('O\'Neill\'s','White','Turkey',1.35),('O\'Neill\'s','Whole','Ham',1.25),('Old Nag','Rey','Beef',1.35),('Old Nag','Rey','Ham',1.4);
 /*!40000 ALTER TABLE `sandwiches` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,4 +100,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-08-06 12:54:09
+-- Dump completed on 2013-08-07 10:49:53

@@ -1,6 +1,6 @@
  DROP DATABASE IF EXISTS vtapp;
  CREATE DATABASE vtapp;
- CREATE USER 'vtapp_user'@'localhost';
  DROP USER 'vtapp_user'@'localhost';
+ CREATE USER 'vtapp_user'@'localhost';
  GRANT SELECT ON vtapp.* TO 'vtapp_user'@'localhost';
  SHOW GRANTS FOR 'vtapp_user'@'localhost';

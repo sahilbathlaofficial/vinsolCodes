@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS multibranch_library;
 CREATE DATABASE multibranch_library;
 
 USE multibranch_library;
@@ -35,10 +36,12 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS Holdings;
 CREATE TABLE Holdings
 (
-  Branch varchar(2) REFERENCES Branch.Bcode,
-  Title varchar(200) REFERENCES Titles.Title,
+  Branch varchar(2),
+  Title varchar(200),
   copies int(10),
-  PRIMARY KEY(Branch,Title)
+  PRIMARY KEY(Branch,Title),
+  FOREIGN KEY(Branch) REFERENCES Branch(Bcode),
+  FOREIGN KEY(Title) REFERENCES Titles(Title)
 );
 LOCK TABLES Holdings WRITE;
 INSERT INTO Holdings values('B1','Susannah',3);

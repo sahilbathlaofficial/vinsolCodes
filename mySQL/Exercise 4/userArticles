@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS user_articles;
 CREATE DATABASE user_articles;
 
 USE user_articles;
@@ -22,10 +23,11 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS articles;
 CREATE TABLE articles
 (
-  username varchar(200) REFERENCES users.name,
+  username varchar(200),
   article varchar(255),
   category varchar(100),
-  PRIMARY KEY(username,article)
+  PRIMARY KEY(article),
+  FOREIGN KEY(username) REFERENCES users(name)
 );
 LOCK TABLES articles WRITE;
 INSERT INTO articles values('sahil','Yeh Jawani Hai Deewani','Bollywood');
@@ -42,10 +44,12 @@ DROP TABLE IF EXISTS comments;
 CREATE TABLE comments
 (
   id int(255) AUTO_INCREMENT,
-  user varchar(200) REFERENCES users.name,
-  article text REFERENCES articles.article,
+  user varchar(200),
+  article varchar(255),
   comment text,
-  PRIMARY KEY(id)
+  PRIMARY KEY(id),
+  FOREIGN KEY(user) REFERENCES users(name),
+  FOREIGN KEY(article) REFERENCES articles(article)
 );
 LOCK TABLES comments WRITE;
 INSERT INTO comments(user,article,comment) values('pramod','Yeh Jawani Hai Deewani','What\'s the meaning of this');
@@ -71,7 +75,7 @@ DESCRIBE articles;
 SELECT username,article FROM articles WHERE username = 'akhil';
 
 #Finding comments associated with above query
-SELECT articles.article AS 'Article By' ,comments.user AS 'Commented By',comments.comment FROM articles
+SELECT articles.article AS 'Article' ,comments.user AS 'Commented By',comments.comment FROM articles
 JOIN comments
 WHERE articles.article = comments.article and articles.username = 'akhil';
 
@@ -86,7 +90,7 @@ ORDER BY MAX_COMMENTS DESC
 LIMIT 1;
 
 #Article which does not have more than one comment by the same user
-SELECT articles.article,comments.user FROM articles
+SELECT articles.article,IFNULL(GROUP_CONCAT(comments.user SEPARATOR ' '),'No one commented on this article') AS 'comments By' FROM articles
 LEFT JOIN comments USING (article)
 GROUP BY articles.article
 HAVING COUNT(comments.user) = COUNT(DISTINCT comments.user);

@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS sandwiches;
 CREATE DATABASE sandwiches;
 
 USE sandwiches;
@@ -37,11 +38,12 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS sandwiches;
 CREATE TABLE sandwiches
 (
-  location varchar(200) REFERENCES locations.lname,
+  location varchar(200),
   bread varchar(200),
   filling varchar(200),
   price float(20),
-  PRIMARY KEY(location,bread,filling)
+  PRIMARY KEY(location,bread,filling),
+  FOREIGN KEY(location) REFERENCES locations(lname)
 );
 LOCK TABLES sandwiches WRITE;
 INSERT INTO sandwiches values('Lincoln','Rey','Ham',1.25);

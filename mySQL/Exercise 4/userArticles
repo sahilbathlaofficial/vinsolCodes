@@ -80,14 +80,14 @@ JOIN comments
 WHERE articles.article = comments.article and articles.username = 'akhil';
 
 #Articles with no comments
-SELECT article AS 'Articles Not commented on' FROM articles
-WHERE article NOT IN (SELECT article FROM comments);
+SELECT articles.article AS 'Articles Not commented on' FROM articles
+LEFT JOIN comments USING(article)
+WHERE comments.article IS NULL;
 
 #Articles with max comments
 SELECT article,COUNT(comment) AS MAX_COMMENTS FROM comments
 GROUP BY article
-ORDER BY MAX_COMMENTS DESC
-LIMIT 1;
+HAVING MAX_COMMENTS = (SELECT COUNT(comment) FROM comments GROUP BY article ORDER BY COUNT(comment) DESC LIMIT 1)
 
 #Article which does not have more than one comment by the same user
 SELECT articles.article,IFNULL(GROUP_CONCAT(comments.user SEPARATOR ' '),'No one commented on this article') AS 'comments By' FROM articles

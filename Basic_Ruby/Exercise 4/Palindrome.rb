@@ -4,7 +4,7 @@ while characterInput != 'q'
   begin
     system("stty raw echo")
     characterInput = STDIN.getc
-    inputString << characterInput if characterInput != 'q'
+    inputString << characterInput if characterInput =~ /qQ/
   ensure
     system("stty -raw echo")
   end

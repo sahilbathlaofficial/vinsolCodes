@@ -6,7 +6,7 @@ DROP TABLE IF EXISTS employees;
 CREATE TABLE employees
 (
   id int AUTO_INCREMENT,
-  name tinytext,
+  name varchar(255),
   PRIMARY KEY(id)
 );
 
@@ -18,9 +18,9 @@ DROP TABLE IF EXISTS assets;
 CREATE TABLE assets
 (
   id int AUTO_INCREMENT,
-  name tinytext,
+  name varchar(255),
   date_of_purchase DATE,
-  make tinytext,
+  make varchar(255),
   warranty int(6),  #years
   status enum('assigned','not assigned','repair','Shared') DEFAULT 'not assigned',
   PRIMARY KEY(id)

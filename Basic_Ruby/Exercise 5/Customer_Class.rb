@@ -1,5 +1,5 @@
 class Customer
-  attr_reader :name,:account_id,:balance;
+  attr_reader :name,:balance;
   @@account_id = 0;
   def initialize (name)
     @name = name

@@ -16,7 +16,6 @@ class Customer
   end
 end
 
-account_id = 0
 john = Customer.new('john')
 ron = Customer.new('ron')
 john.deposit(200)

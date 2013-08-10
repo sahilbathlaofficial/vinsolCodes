@@ -1,13 +1,12 @@
 def fibonacci
   print "0 1"
-  first = 0
-  second = 1
-  while (first + second) < 1000
-    third = first + second
-    yield(third)
-    first = second
-    second = third
+  second_last = 0
+  last = 1
+  while (new_last = second_last + last) < 1000
+    yield(new_last)
+    second_last = last
+    last = new_last
   end
 end
-fibonacci {|sum| print " #{sum}"}
+fibonacci {|new_last| print " #{new_last}"}
 

@@ -1,3 +1,3 @@
 inputString = gets
-puts inputString.gsub(/[aeiouAEIOU]/,'*')
+puts inputString.gsub(/[aeiou]/i,'*')
 

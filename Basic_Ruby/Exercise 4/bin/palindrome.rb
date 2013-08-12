@@ -3,7 +3,7 @@ while true
   begin
     system("stty raw echo")
     characterInput = STDIN.getc
-    break if (characterInput.to_s =~ /q|Q/)
+    break if (characterInput.to_s =~ /q/i)
     inputString = (inputString || '') << characterInput
   ensure
     system("stty -raw echo")

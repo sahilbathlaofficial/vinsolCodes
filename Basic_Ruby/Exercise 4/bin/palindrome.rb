@@ -1,3 +1,4 @@
+#! /usr/bin/ruby
 while true
   begin
     system("stty raw echo")

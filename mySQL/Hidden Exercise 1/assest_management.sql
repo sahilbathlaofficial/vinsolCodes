@@ -125,7 +125,7 @@ HAVING Total_assigned_assets =
 (SELECT COUNT(*) AS 'total' FROM assigned_assets WHERE till_at IS NULL AND assigned_to_type = 'employee' GROUP BY assigned_to_id ORDER BY total DESC LIMIT 1);
 
 #3 Find name and period of all the employees who have used a Laptop - let’s say laptop A - since it was bought by the company.
-SELECT employees.name,assets.name,TO_DAYS(IFNULL(assigned_assets.till_at,CURDATE())) - TO_DAYS(assigned_assets.from_at) AS 'period(yyyy-mm-dd)' FROM assigned_assets
+SELECT employees.name,assets.name,TO_DAYS(IFNULL(assigned_assets.till_at,CURDATE())) - TO_DAYS(assigned_assets.from_at) AS 'period(in days)' FROM assigned_assets
 JOIN employees 
 ON employees.id = assigned_assets.assigned_to_id
 JOIN assets

@@ -49,16 +49,16 @@ CREATE TABLE assigned_assets
   id int AUTO_INCREMENT,
   assets_id int,
   assigned_to_id int,
-  assigned_to_id_type enum('employee','location'),
+  assigned_to_type enum('employee','location'),
   from_at DATE,
   till_at DATE,
   PRIMARY KEY (id),
-  INDEX (assigned_to_id,assigned_to_id_type),
+  INDEX (assigned_to_id,assigned_to_type),
   FOREIGN KEY (assets_id) REFERENCES assets(id)
 );
 
 LOCK TABLES assigned_assets WRITE;
-INSERT INTO assigned_assets(assets_id,assigned_to_id,assigned_to_id_type,from_at,till_at) values (1,1,'employee','2011-01-01','2011-01-31'),(1,2,'employee','2012-01-01',DATE_ADD(CURDATE(),INTERVAL 1 YEAR)),(2,2,'employee','2011-01-01','2011-01-31'),(5,1,'employee','2011-03-01',DATE_ADD(CURDATE(),INTERVAL 1 YEAR)),(6,2,'employee','2011-01-01',DATE_ADD(CURDATE(),INTERVAL 1 YEAR)),(8,1,'location','2011-08-15',DATE_ADD(CURDATE(),INTERVAL 1 YEAR));
+INSERT INTO assigned_assets(assets_id,assigned_to_id,assigned_to_type,from_at,till_at) values (1,1,'employee','2011-01-01','2011-01-31'),(1,2,'employee','2012-01-01',DATE_ADD(CURDATE(),INTERVAL 1 YEAR)),(2,2,'employee','2011-01-01','2011-01-31'),(5,1,'employee','2011-03-01',DATE_ADD(CURDATE(),INTERVAL 1 YEAR)),(6,2,'employee','2011-01-01',DATE_ADD(CURDATE(),INTERVAL 1 YEAR)),(8,1,'location','2011-08-15',DATE_ADD(CURDATE(),INTERVAL 1 YEAR));
 UNLOCK TABLES;
 
 
@@ -111,14 +111,14 @@ DELIMITER ;
 #1 Find the name of the employee who has been alloted the maximum number of assets till_at date
 SELECT employees.name,Count(assigned_assets.assets_id) AS Total_assigned_assets FROM assigned_assets
 JOIN employees 
-WHERE employees.id = assigned_assets.assigned_to_id AND assigned_assets.assigned_to_id_type = 'employee'
+WHERE employees.id = assigned_assets.assigned_to_id AND assigned_assets.assigned_to_type = 'employee'
 GROUP BY assigned_assets.assigned_to_id
 HAVING Total_assigned_assets = (SELECT COUNT(*) AS 'total' FROM assigned_assets GROUP BY assigned_to_id ORDER BY total DESC LIMIT 1);
 
 #2 Identify the name of the employee who currently has the maximum number of assets as of today
 SELECT employees.name,Count(assigned_assets.assets_id) AS Total_assigned_assets FROM assigned_assets
 JOIN employees 
-WHERE employees.id = assigned_assets.assigned_to_id AND CURDATE() < assigned_assets.till_at AND assigned_assets.assigned_to_id_type = 'employee'
+WHERE employees.id = assigned_assets.assigned_to_id AND CURDATE() < assigned_assets.till_at AND assigned_assets.assigned_to_type = 'employee'
 GROUP BY assigned_assets.assigned_to_id
 HAVING Total_assigned_assets = (SELECT COUNT(*) AS 'total' FROM assigned_assets WHERE  CURDATE() < till_at GROUP BY assigned_to_id ORDER BY total DESC LIMIT 1);
 
@@ -128,7 +128,7 @@ JOIN employees
 ON employees.id = assigned_assets.assigned_to_id
 JOIN assets
 ON assets.id =  assigned_assets.assets_id
-WHERE assets.name = "Laptop A" AND assigned_assets.assigned_to_id_type = 'employee';
+WHERE assets.name = "Laptop A" AND assigned_assets.assigned_to_type = 'employee';
 
 #4 Find the list of assets that are currently not assigned to anyone hence lying with the asset manage ( HR)
 SELECT name FROM assets 1
@@ -147,4 +147,4 @@ SELECT * FROM assets where CURDATE() < DATE_ADD(date_of_purchase,INTERVAL warran
 
 #7 Return a list of Employee Names who do not have any asset assigned to them.
 SELECT name FROM employees
-WHERE id NOT IN (SELECT DISTINCT assigned_to_id FROM assigned_assets WHERE till_at > CURDATE() AND assigned_assets.assigned_to_id_type = 'employee' );
+WHERE id NOT IN (SELECT DISTINCT assigned_to_id FROM assigned_assets WHERE till_at > CURDATE() AND assigned_assets.assigned_to_type = 'employee' );

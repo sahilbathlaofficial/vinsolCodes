@@ -58,7 +58,7 @@ CREATE TABLE assigned_assets
 );
 
 LOCK TABLES assigned_assets WRITE;
-INSERT INTO assigned_assets(assets_id,assigned_to_id,assigned_to_type,from_at,till_at) values (1,1,'employee','2011-01-01','2011-01-31'),(1,2,'employee','2012-01-01',NULL),(2,2,'employee','2011-01-01','2011-01-31'),(5,1,'employee','2011-03-01',NULL),(6,2,'employee','2011-01-01',NULL),(8,1,'location','2011-08-15',NULL);
+INSERT INTO assigned_assets(assets_id,assigned_to_id,assigned_to_type,from_at,till_at) values (1,1,'employee','2011-01-01','2011-12-31'),(1,2,'employee','2012-01-01',NULL),(2,2,'employee','2011-01-01','2011-01-31'),(5,1,'employee','2011-03-01',NULL),(6,2,'employee','2011-01-01',NULL),(8,1,'location','2011-08-15',NULL);
 UNLOCK TABLES;
 
 
@@ -125,7 +125,7 @@ HAVING Total_assigned_assets =
 (SELECT COUNT(*) AS 'total' FROM assigned_assets WHERE till_at IS NULL AND assigned_to_type = 'employee' GROUP BY assigned_to_id ORDER BY total DESC LIMIT 1);
 
 #3 Find name and period of all the employees who have used a Laptop - let’s say laptop A - since it was bought by the company.
-SELECT employees.name,assets.name,MID(DATE_SUB(CURDATE(),INTERVAL TO_DAYS(assigned_assets.from_at) DAY),3) AS 'period' FROM assigned_assets
+SELECT employees.name,assets.name,TO_DAYS(IFNULL(assigned_assets.till_at,CURDATE())) - TO_DAYS(assigned_assets.from_at) AS 'period(yyyy-mm-dd)' FROM assigned_assets
 JOIN employees 
 ON employees.id = assigned_assets.assigned_to_id
 JOIN assets

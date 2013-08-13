@@ -49,7 +49,7 @@ CREATE TABLE assigned_assets
   id int AUTO_INCREMENT,
   assets_id int,
   assigned_to int,
-  assigned_type enum('employee','location'),
+  assigned_to_type enum('employee','location'),
   from_at DATE,
   till_at DATE,
   PRIMARY KEY (id),

@@ -39,7 +39,7 @@ CREATE TABLE assets
 );
 
 LOCK TABLES assets WRITE;
-INSERT INTO assets(id,name,date_of_purchase,make,warranty,status) values(1,'Laptop A','2011-01-01','Dell',2,'assigned'),(2,'Laptop B','2011-01-01','Sony',4,'not assigned'),(3,'Laptop N1',DATE_ADD(CURDATE(),INTERVAL 1 YEAR),'MAC',5,'not assigned'),(4,'Laptop N2',DATE_ADD(CURDATE(),INTERVAL 1 YEAR),'MAC',5,'not assigned'),(5,'Iphone A','2011-03-01','Apple',1,'assigned'),(6,'Iphone B','2011-01-01','Apple',1,'assigned'),(7,'Projector A','2011-08-15','DigiMax',10,'shared'),(8,'Printer A','2011-08-15','Canon',10,'shared'),(9,'Printer B','2011-09-10','Canon',10,'not assigned');
+INSERT INTO assets(id,name,date_of_purchase,make,warranty,status) values(1,'Laptop A','2011-01-01','Dell',2,'assigned'),(2,'Laptop B','2011-01-01','Sony',4,'not assigned'),(3,'Laptop N1',CURDATE(),'MAC',5,'not assigned'),(4,'Laptop N2',CURDATE(),'MAC',5,'not assigned'),(5,'Iphone A','2011-03-01','Apple',1,'assigned'),(6,'Iphone B','2011-01-01','Apple',1,'assigned'),(7,'Projector A','2011-08-15','DigiMax',10,'shared'),(8,'Printer A','2011-08-15','Canon',10,'shared'),(9,'Printer B','2011-09-10','Canon',10,'not assigned');
 UNLOCK TABLES;
 
 
@@ -53,12 +53,12 @@ CREATE TABLE assigned_assets
   from_at DATE,
   till_at DATE,
   PRIMARY KEY (id),
-  INDEX (assigned_to_id,assigned_to_type),
-  FOREIGN KEY (assets_id) REFERENCES assets(id)
+  FOREIGN KEY (assets_id) REFERENCES assets(id),
+  INDEX (assigned_to_id,assigned_to_type)
 );
 
 LOCK TABLES assigned_assets WRITE;
-INSERT INTO assigned_assets(assets_id,assigned_to_id,assigned_to_type,from_at,till_at) values (1,1,'employee','2011-01-01','2011-01-31'),(1,2,'employee','2012-01-01',DATE_ADD(CURDATE(),INTERVAL 1 YEAR)),(2,2,'employee','2011-01-01','2011-01-31'),(5,1,'employee','2011-03-01',DATE_ADD(CURDATE(),INTERVAL 1 YEAR)),(6,2,'employee','2011-01-01',DATE_ADD(CURDATE(),INTERVAL 1 YEAR)),(8,1,'location','2011-08-15',DATE_ADD(CURDATE(),INTERVAL 1 YEAR));
+INSERT INTO assigned_assets(assets_id,assigned_to_id,assigned_to_type,from_at,till_at) values (1,1,'employee','2011-01-01','2011-01-31'),(1,2,'employee','2012-01-01',NULL),(2,2,'employee','2011-01-01','2011-01-31'),(5,1,'employee','2011-03-01',NULL),(6,2,'employee','2011-01-01',NULL),(8,1,'location','2011-08-15',NULL);
 UNLOCK TABLES;
 
 
@@ -113,25 +113,27 @@ SELECT employees.name,Count(assigned_assets.assets_id) AS Total_assigned_assets 
 JOIN employees 
 WHERE employees.id = assigned_assets.assigned_to_id AND assigned_assets.assigned_to_type = 'employee'
 GROUP BY assigned_assets.assigned_to_id
-HAVING Total_assigned_assets = (SELECT COUNT(*) AS 'total' FROM assigned_assets GROUP BY assigned_to_id ORDER BY total DESC LIMIT 1);
+HAVING Total_assigned_assets = 
+(SELECT COUNT(*) AS 'total' FROM assigned_assets WHERE assigned_assets.assigned_to_type = 'employee' GROUP BY assigned_to_id ORDER BY total DESC LIMIT 1);
 
 #2 Identify the name of the employee who currently has the maximum number of assets as of today
 SELECT employees.name,Count(assigned_assets.assets_id) AS Total_assigned_assets FROM assigned_assets
 JOIN employees 
-WHERE employees.id = assigned_assets.assigned_to_id AND CURDATE() < assigned_assets.till_at AND assigned_assets.assigned_to_type = 'employee'
+WHERE employees.id = assigned_assets.assigned_to_id  AND assigned_assets.till_at IS NULL AND assigned_assets.assigned_to_type = 'employee'
 GROUP BY assigned_assets.assigned_to_id
-HAVING Total_assigned_assets = (SELECT COUNT(*) AS 'total' FROM assigned_assets WHERE  CURDATE() < till_at GROUP BY assigned_to_id ORDER BY total DESC LIMIT 1);
+HAVING Total_assigned_assets = 
+(SELECT COUNT(*) AS 'total' FROM assigned_assets WHERE till_at IS NULL AND assigned_to_type = 'employee' GROUP BY assigned_to_id ORDER BY total DESC LIMIT 1);
 
 #3 Find name and period of all the employees who have used a Laptop - let’s say laptop A - since it was bought by the company.
-SELECT employees.name,assets.name,assigned_assets.from_at,'Currently Assigned' AS 'Assigned till_at' FROM assigned_assets
+SELECT employees.name,assets.name,MID(DATE_SUB(CURDATE(),INTERVAL TO_DAYS(assigned_assets.from_at) DAY),3) AS 'period' FROM assigned_assets
 JOIN employees 
 ON employees.id = assigned_assets.assigned_to_id
 JOIN assets
 ON assets.id =  assigned_assets.assets_id
-WHERE assets.name = "Laptop A" AND assigned_assets.assigned_to_type = 'employee';
+WHERE assets.id = 1 AND assigned_assets.assigned_to_type = 'employee';
 
 #4 Find the list of assets that are currently not assigned to anyone hence lying with the asset manage ( HR)
-SELECT name FROM assets 1
+SELECT name FROM assets 
 WHERE status = 'not assigned';
 
 #5 An employee say Bob is leaving the company, write a query to get the list of assets he should be returning to the company.
@@ -140,11 +142,14 @@ JOIN employees
 ON employees.id = assigned_assets.assigned_to_id
 JOIN assets
 ON assets.id =  assigned_assets.assets_id
-WHERE employees.name = "Bob" AND CURDATE() < assigned_assets.till_at;
+WHERE employees.name = "Bob" AND assigned_assets.till_at IS NULL;
 
 #6 Write a query to find assets which are out of warranty
 SELECT * FROM assets where CURDATE() < DATE_ADD(date_of_purchase,INTERVAL warranty YEAR);
 
 #7 Return a list of Employee Names who do not have any asset assigned to them.
-SELECT name FROM employees
-WHERE id NOT IN (SELECT DISTINCT assigned_to_id FROM assigned_assets WHERE till_at > CURDATE() AND assigned_assets.assigned_to_type = 'employee' );
+SELECT e.name,0 AS "Assets assigned" FROM employees as e
+LEFT JOIN assigned_assets as a
+ON e.id = a.assigned_to_id 
+WHERE a.from_at IS NULL 
+

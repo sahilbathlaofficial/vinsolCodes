@@ -125,7 +125,7 @@ HAVING Total_assigned_assets =
 (SELECT COUNT(*) AS 'total' FROM assigned_assets WHERE till_at IS NULL AND assigned_to_type = 'employee' GROUP BY assigned_to_id ORDER BY total DESC LIMIT 1);
 
 #3 Find name and period of all the employees who have used a Laptop - let’s say laptop A - since it was bought by the company.
-SELECT employees.name,assets.name,TO_DAYS(IFNULL(assigned_assets.till_at,CURDATE())) - TO_DAYS(assigned_assets.from_at) AS 'period(in days)' FROM assigned_assets
+SELECT employees.name,assets.name,IF(assigned_assets.till_at IS NOT NULL,TO_DAYS(assigned_assets.till_at) - TO_DAYS(assigned_assets.from_at),'still assigned') AS 'period(in days)' FROM assigned_assets
 JOIN employees 
 ON employees.id = assigned_assets.assigned_to_id
 JOIN assets
@@ -148,8 +148,8 @@ WHERE employees.name = "Bob" AND assigned_assets.till_at IS NULL;
 SELECT * FROM assets where CURDATE() < DATE_ADD(date_of_purchase,INTERVAL warranty YEAR);
 
 #7 Return a list of Employee Names who do not have any asset assigned to them.
-SELECT e.name,0 AS "Assets assigned" FROM employees as e
+SELECT e.name,0 as 'Assigned assets currently' FROM employees as e
 LEFT JOIN assigned_assets as a
-ON e.id = a.assigned_to_id 
-WHERE a.from_at IS NULL 
+ON e.id = a.assigned_to_id AND a.till_at IS NULL AND a.assigned_to_type = "employee"
+WHERE a.from_at is NULL 
 

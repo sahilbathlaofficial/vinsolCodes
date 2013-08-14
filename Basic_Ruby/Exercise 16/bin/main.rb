@@ -1,5 +1,5 @@
 #! /usr/bin/ruby
-require_relative "../lib/string_regex"
+require_relative "../lib/string"
 puts "Enter string" 
 input_string = gets.chomp
 puts "Enter search string" 

@@ -3,9 +3,9 @@ class Array
     hash = {}
     for element in self do 
       if ( element.is_a? Enumerable )
-        hash[element.size] ||= [] << element
+        (hash[element.size] ||= []) << element
       else
-        hash[element.to_s.size] ||= [] << element
+        (hash[element.to_s.size] ||= []) << element
       end
     end
   hash

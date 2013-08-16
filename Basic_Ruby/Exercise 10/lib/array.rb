@@ -3,7 +3,7 @@ class Array
     returned_hash = self.inject( Hash.new{|hash,key| hash[key] = []} ) do |hash,element|
       size = element.to_s.size
       type = size.odd? ? "odd" : "even"
-      hash[type][size] ||= [] << element
+      (hash[type][size] ||= []) << element
       hash
     end
     returned_hash.each_value { |value| value.delete(nil)}

@@ -1,18 +1,18 @@
 #! /usr/bin/ruby
 require "time"
-require_relative "../lib/string.rb"
+def check_valid? (time_args)
+   time_args.each { |element| return false if element !~ /([01]?[0-9]|2[0-3]):([0-5][0-9]|6[0]):([0-5][0-9]|6[0])/ }
+end
+def add_time(*time_args)
+  abort ("Wrong time format") if !(check_valid?(time_args))
+  new_time = Time.parse("00:00:00") 
+  time_args.each { |time| new_time += (Time.parse(time) - Time.parse("00:00:00")) }
+  days = (new_time.day - Time.now.day) 
+  print days," Days\n"
+  printf("%02d:%02d:%02d\n", new_time.hour, new_time.min, new_time.sec)
+end
 
-while (limit = limit.to_i) == 0
-  puts "Enter number of times you wish to add"
-  limit = gets 
-end
-time = []
-(limit.to_i).times do
-  puts "Enter time in (hh:mm:ss) format" 
-  time << gets.chomp
-  abort("Bad format") if !time[-1].check_valid?
-end
-time[0].add_time(time[1 .. -1])
+add_time("10:00:00","23:20:13","12:11:08","23:00:00")
 
 
 

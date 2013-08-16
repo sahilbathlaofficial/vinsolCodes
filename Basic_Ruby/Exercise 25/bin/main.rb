@@ -30,5 +30,9 @@ loop do
   continue = gets
   break if(continue !~ /^y|yes$/i)
 end
-
-product_array.each {|element| puts element.show_product_data }
+puts "".rjust(53,'#')
+puts "|#{"Product".center(30)}|#{"Price".center(20)}|\n"
+product_array.each {|element| puts element.show_product_data}
+puts "".rjust(53,'#')
+puts "Grand total := #{product_array.inject(0) {|sum,element| sum += element.price}}".rjust(53," ")
+puts "".rjust(53,'#')

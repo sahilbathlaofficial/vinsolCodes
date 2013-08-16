@@ -1,7 +1,7 @@
 class Print
   def self.show_option(value, table_width)
     puts "".rjust(table_width,'#')
-    print "Grand Total : #{value.to_s}".center(table_width)
+    puts "Grand Total : #{value.to_s}".center(table_width)
     puts "".rjust(table_width,'#')
   end
   # options = ["string bottom","string above"]

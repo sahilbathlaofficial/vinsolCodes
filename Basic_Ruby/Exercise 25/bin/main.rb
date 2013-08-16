@@ -10,11 +10,11 @@ loop do
   while true  
     print "import_duty?(yes/no) :" 
     import_duty = gets.chomp
-    break if (import_duty.strip =~ /^(yes|no)$/i)
+    break if (import_duty =~ /^(yes|no)$/i)
   end
   while true
     sales_tax = "no" if product_name =~ /book|food|medicine/i
-    break if (sales_tax.strip =~ /^(yes|no)$/i)
+    break if (sales_tax =~ /^(yes|no)$/i)
     print "Exempted from tax? :" 
     sales_tax = gets.chomp
   end
@@ -26,7 +26,8 @@ loop do
   product_array << Product.new(product_name,import_duty,sales_tax,price)
   puts "Do you want to continue?" 
   continue = gets
-  break if(continue.strip !~ /^(y|yes)$/i)
+  break if(continue !~ /^(y|yes)$/i)
 end
 invoice = Invoice.new(product_array)
+invoice.generate_invoice
 

@@ -1,10 +1,10 @@
 class Array
-  def power(raise_to)
+  def power(exponent)
     self.collect do |element|
       if element.is_a? Numeric
-        element = element ** raise_to  
+        element = element ** exponent  
       elsif element.is_a? Array
-        element.power(raise_to)
+        element.power(exponent)
       else
         element = element.to_s + "[Power function not applicable on this type]"
       end 

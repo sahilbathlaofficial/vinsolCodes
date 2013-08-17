@@ -4,7 +4,7 @@ class Bike < Vehicle
     super(name,price)
     @dealer = dealer
   end
-  def show_contents()
+  def to_s
     super + "\nDealer : #{@dealer}"
   end
 end

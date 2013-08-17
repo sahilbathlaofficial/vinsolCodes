@@ -4,7 +4,7 @@ class Vehicle
     @name = name
     @price = price
   end
-  def show_contents()
+  def to_s
     "\nVehicle = #{@name}\nPrice = #{@price}"
   end
 end

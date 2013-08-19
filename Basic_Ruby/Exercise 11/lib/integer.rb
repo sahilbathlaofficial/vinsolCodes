@@ -4,8 +4,8 @@ class Integer
   end
 
   def pascal_triangle
-    for i in 0..self
-      for j in 0..i
+    (self+1).times do |i|
+      (i+1).times do |j|
         print factorial(i)/(factorial(j)*factorial(i-j))," "
       end
     puts

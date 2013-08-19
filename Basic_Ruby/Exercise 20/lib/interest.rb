@@ -6,7 +6,7 @@ class Interest
     @diff = diff
   end
   def difference_in_interest
-    @diff.call(simple_interest,compound_interest)
+    @diff.call(compound_interest - simple_interest)
   end
   private 
   def simple_interest

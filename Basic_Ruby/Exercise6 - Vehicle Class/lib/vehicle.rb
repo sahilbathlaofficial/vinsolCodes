@@ -5,6 +5,6 @@ class Vehicle
     @price = price
   end
   def to_s
-    "\nVehicle = #{@name}\nPrice = #{@price}"
+    "\nVehicle = #{ @name }\nPrice = #{ @price }"
   end
 end

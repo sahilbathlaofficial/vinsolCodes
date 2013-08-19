@@ -6,7 +6,3 @@ puts "Enter the number of rows for pascal triangle"
 limit = gets.to_i 
 end
 limit.pascal_triangle { |value| print value }
-
-
-
-

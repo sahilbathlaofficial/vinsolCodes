@@ -1,5 +1,5 @@
 #! /usr/bin/ruby
-require_relative "../lib/object_new.rb"
+require_relative "../lib/object.rb"
 
 puts "Enter your method name"
 method_name = gets.chomp

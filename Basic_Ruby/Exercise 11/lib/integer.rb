@@ -8,7 +8,7 @@ class Integer
       (i+1).times do |j|
         yield factorial(i)/(factorial(j)*factorial(i-j)) 
       end
-    puts 
+      puts 
     end
   end
 

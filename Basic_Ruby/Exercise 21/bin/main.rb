@@ -11,7 +11,3 @@ rescue Exception
   abort
 end
 print "Factorial is: ", number > 1 ?  (number).factorial : "1","\n"
-
-
-
-

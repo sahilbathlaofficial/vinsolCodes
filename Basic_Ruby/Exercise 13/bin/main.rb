@@ -1,7 +1,9 @@
 #! /usr/bin/ruby
-require_relative "../lib/range"
+require_relative "../lib/integer"
 while true
-  puts "Enter any number(greater then 0) to find its factorial"
-  break if (number = gets.to_i) >= 1
+  puts "Enter any number(greater than equal to 0) to find its factorial"
+  number = gets.chomp
+  break if (number.to_i) >= 1 || number == '0'
 end
-print "Facorial is ",(1..number).factorial,"\n"
+number = number.to_i
+print "Factorial is ", number > 0 ? number.factorial : "1", "\n"

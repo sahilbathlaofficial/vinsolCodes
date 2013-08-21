@@ -7,8 +7,8 @@ def add_time(*time_args)
   abort ("Wrong time format") if !(check_valid?(time_args))
   new_time = Time.parse("00:00:00") 
   time_args.each { |time| new_time += (Time.parse(time) - Time.parse("00:00:00")) }
-  days = (new_time.day - Time.now.day) 
-  print days," Days\n"
+  days = ((new_time - Time.now)/(24*60*60)).to_i
+  print days," Days & "
   printf("%02d:%02d:%02d\n", new_time.hour, new_time.min, new_time.sec)
 end
 

@@ -1,6 +1,6 @@
 require_relative "vehicle"
 class Bike < Vehicle
-  def initialize (name, price, dealer)
+  def initialize(name, price, dealer)
     super(name, price)
     @dealer = dealer
   end

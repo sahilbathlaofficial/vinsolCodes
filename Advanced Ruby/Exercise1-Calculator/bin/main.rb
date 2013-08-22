@@ -1,3 +1,3 @@
 #! /usr/bin/ruby
-require_relative '../lib/object'
-puts calculate 3,:+,5
+require_relative '../lib/calculator'
+puts Calculator.new.calculate 3, :+, 5

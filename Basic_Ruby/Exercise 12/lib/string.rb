@@ -1,17 +1,20 @@
 class String
-  def find_letters_in_range(range)
-    split('').count { |alphabet| (range).include? alphabet } 
-  end
-
   def show_different_letter_count
-    lower_case_count = find_letters_in_range('a'..'z')
-    upper_case_count = find_letters_in_range('A'..'Z')
-    digits_count = find_letters_in_range('0'..'9')
-    special_symbols_count = gsub(' ', '').length - lower_case_count - upper_case_count - digits_count
-
-    puts "Lower case letters = #{ lower_case_count }"
-    puts "Upper case letters = #{ upper_case_count }"
-    puts "Digits = #{ digits_count }"
-    puts "Special letters = #{ special_symbols_count }"
+    letter_count = Hash.new(0)
+    range_digits = '0'..'9'
+    range_lower = 'a'..'z'
+    range_upper = 'A'..'Z'
+    white_space = ' '
+    self.each_char do |element|
+      case element
+        when range_digits  then letter_count['digits_count'] += 1
+        when range_lower then letter_count['lower_case_count'] += 1
+        when range_upper then letter_count['upper_case_count'] += 1
+        when white_space
+        else letter_count['special_symbols_count'] += 1
+      end
+    end
+    letter_count
   end  
 end
+

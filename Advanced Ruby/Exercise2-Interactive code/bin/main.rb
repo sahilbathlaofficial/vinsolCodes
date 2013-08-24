@@ -1,19 +1,18 @@
-#! /usr/etc/ruby
-require_relative "../lib/string"
-print "\nPlease Enter The Code (Enter q/Q to exit or press Enter twice to evaluate your code\n\n # ".colorize(31)
-while (line = gets) !~ /^q$/i
-  code = (code || "") + line if line.size != 1
-  if line.size == 1
-  	puts "Your output is :- ".colorize(33)
-  	begin
-  		puts " #{ eval code }" 
-  	rescue Exception
-  			puts "#{ $! }"
-  	end
-  	code = ''
-  	puts "\nWant to retry? Enter (yes/y)".colorize(32)
-  	break if (line = gets) !~ /^yes|y$/i
-    puts "\nPlease Enter The Code (Enter q/Q to exit or press Enter twice to evaluate your code\n\n".colorize(31)
-  end
-  print "# ".colorize(31)
+#! /usr/bin/ruby
+require_relative "../lib/interactive_code"
+require_relative "../lib/colorize"
+
+extend Colorize
+code = InteractiveCode.new
+
+terminating_string = "q"
+evaluating_string = "\n"
+shell_symbol = "#"
+
+loop do
+  print string_color("\nPlease Enter The Code (Enter q/Q to exit or press Enter twice to evaluate your code\n\n", 31)
+  code.generate_code(terminating_string, evaluating_string, shell_symbol)
+  puts string_color("Code Execution :- ", 33)
+  puts code.evaluate
+  code.reset
 end

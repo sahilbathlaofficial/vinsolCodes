@@ -1,0 +1,2 @@
+class StringNotAllowed < StandardError
+end

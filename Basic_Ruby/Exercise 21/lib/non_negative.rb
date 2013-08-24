@@ -1,0 +1,2 @@
+class NonNegative < StandardError
+end

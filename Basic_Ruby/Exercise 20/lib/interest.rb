@@ -1,6 +1,6 @@
 class Interest
 
-  def initialize (principal, time, rate = 10, &initialize_block)
+  def initialize(&initialize_block)
     instance_eval &initialize_block
   end
 

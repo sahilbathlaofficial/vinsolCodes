@@ -8,7 +8,7 @@ puts "Enter Time"
 time = gets while(time = time.to_i) == 0
 
 #interest = Interest.new(Principal,Time,Rate)
-interest = Interest.new(principal, time, 10) do 
+interest = Interest.new do 
   @principal = principal
   @time = time
   @rate = 10

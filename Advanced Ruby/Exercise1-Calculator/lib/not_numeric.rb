@@ -1,0 +1,2 @@
+class NotNumeric < StandardError
+end

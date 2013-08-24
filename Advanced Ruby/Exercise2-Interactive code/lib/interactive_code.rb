@@ -23,10 +23,10 @@ class InteractiveCode
 
   def evaluate
     begin
-  	  eval @code 
-  	rescue Exception => code_execution_error
-  	  code_execution_error
-  	end
-  end
+      eval @code 
+    rescue Exception => code_execution_error
+      code_execution_error
+    end
+  end    
 
 end

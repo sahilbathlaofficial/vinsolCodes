@@ -33,4 +33,3 @@ class Hotel
   end
 
 end
-

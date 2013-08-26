@@ -7,7 +7,7 @@ class String
     white_space = ' '
     self.each_char do |element|
       case element
-        when range_digits  then letter_count['digits_count'] += 1
+        when range_digits then letter_count['digits_count'] += 1
         when range_lower then letter_count['lower_case_count'] += 1
         when range_upper then letter_count['upper_case_count'] += 1
         when white_space
@@ -17,4 +17,3 @@ class String
     letter_count
   end  
 end
-

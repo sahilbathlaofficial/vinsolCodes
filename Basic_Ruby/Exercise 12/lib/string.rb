@@ -1,4 +1,5 @@
 class String
+
   def show_different_letter_count
     letter_count = Hash.new(0)
     range_digits = '0'..'9'
@@ -16,4 +17,5 @@ class String
     end
     letter_count
   end  
+
 end

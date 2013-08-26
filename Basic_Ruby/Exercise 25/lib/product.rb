@@ -1,18 +1,23 @@
 class Product
-  SALES_TAX = 10
-  IMPORT_DUTY = 5
-  attr_reader :price,:taxed_price,:product,:sales_tax,:import_duty
-  def initialize (product_type,import_duty,sales_tax,price)
-    @product = product_type
+
+  SALES_TAX = 0.1
+  IMPORT_DUTY = 0.05
+  attr_reader :price, :taxed_price, :name, :sales_tax, :import_duty
+
+  def initialize (product_name, price, import_duty = true, sales_tax = true)
+    @name = product_name
     @sales_tax = sales_tax
     @import_duty = import_duty
     @price = price
-    @taxed_price =  self.tax_on(@price)
+    @taxed_price =  price_after_tax
   end
-  def tax_on(original_price)
-    taxed_price = @price
-    taxed_price += (original_price * SALES_TAX/100) if @sales_tax=~ /^no$/i
-    taxed_price += (original_price * IMPORT_DUTY/100) if @import_duty =~ /^yes$/i
+
+  def price_after_tax
+    original_price = temp_price = price
+    temp_price += (original_price * (SALES_TAX)) if sales_tax ==  false
+    temp_price += (original_price * (IMPORT_DUTY)) if import_duty == true
+    temp_price
   end
+
 end
 

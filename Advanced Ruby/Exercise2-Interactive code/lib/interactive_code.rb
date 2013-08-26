@@ -11,13 +11,13 @@ class InteractiveCode
     @code = ''
   end 
 
-  def generate_code(terminating_str, evaluating_str = "\n", shell_symbol = "#" )
+  def generate_code(terminating_str, evaluating_str = "END", shell_symbol = ">" )
     loop do
       print string_color(" #{ shell_symbol } ", 31)
       line = gets 
       @code += line
-      abort if @code.chomp =~ /^#{ terminating_str }$/i
-      break if line == evaluating_str 
+      abort if @code.chomp =~ /^#{ Regexp.escape(terminating_str) }$/i
+      break if line =~ /^#{ Regexp.escape(evaluating_str) }$/i
     end
   end
 

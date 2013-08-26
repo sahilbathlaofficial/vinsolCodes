@@ -11,6 +11,3 @@ puts "\n"
 abort("You can't go back in time ") if(check_out < check_in)
 reservation = Reservation.new(check_in, check_out)
 hotels.each{ |hotel| puts reservation.calculate_rent(hotel) } 
-
-
-

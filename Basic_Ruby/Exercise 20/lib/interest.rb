@@ -1,7 +1,7 @@
 class Interest
-
-  def initialize(&initialize_block)
-    instance_eval &initialize_block
+  attr_accessor :principal, :rate, :time
+  def initialize
+    yield self
   end
 
   def difference_in_interest
@@ -11,11 +11,11 @@ class Interest
   private 
 
   def simple_interest
-    @principal * (@rate/100.0) * @time
+    principal * rate * time
   end
 
   def compound_interest
-    @principal * (((@rate/100.0) + 1) ** @time) - @principal
+    principal * ((rate + 1) ** time) - principal
   end
 
 end

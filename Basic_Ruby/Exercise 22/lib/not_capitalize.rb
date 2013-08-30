@@ -1,0 +1,2 @@
+class NotCapitalize < StandardError
+end

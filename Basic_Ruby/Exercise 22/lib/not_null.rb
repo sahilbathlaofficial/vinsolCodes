@@ -1,0 +1,2 @@
+class NotNull < StandardError
+end

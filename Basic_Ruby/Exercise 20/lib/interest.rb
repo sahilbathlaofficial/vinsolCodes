@@ -1,5 +1,6 @@
 class Interest
   attr_accessor :principal, :rate, :time
+
   def initialize
     yield self
   end

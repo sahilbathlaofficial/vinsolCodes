@@ -20,8 +20,8 @@ class PrintTable
       puts "".rjust(table_width, '#')
       heading.each {|title| print "|", "\e[31m", title.center(length), "\e[0m" }
       puts
-      data.each {|data_row| data_row.each do|value|
-        print "|",value.to_s.center(length) }
+      data.each do |data_row|
+        data_row.each { |value| print "|",value.to_s.center(length) }
         puts 
       end
       puts "".rjust(table_width, '#')

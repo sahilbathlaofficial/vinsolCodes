@@ -11,7 +11,7 @@ loop do
   redo unless(product_name.size != 0) 
 
   while true  
-    print "import_duty?:" 
+    print "import_duty?(yes/no):" 
     import_duty = gets.chomp
     if(import_duty =~ /^(yes|no)$/i)
       import_duty = (import_duty =~ /^yes$/i) ? true : false 
@@ -25,14 +25,14 @@ loop do
       sales_tax = (sales_tax =~ /^yes$/i) ? true : false 
       break
     end
-    print "Exempted from tax? :" 
+    print "Exempted from tax?(yes/no) :" 
     sales_tax = gets.chomp
   end
 
   while true
     print "Price: "
     price = gets.to_f
-    break if (price != 0)
+    break if (price > 0)
   end
 
   product_array << Product.new(product_name, price, import_duty, sales_tax)

@@ -16,7 +16,7 @@ class InteractiveCode
       print string_color(" #{ shell_symbol } ", 31)
       line = gets 
       @code += line
-      abort if @code.chomp =~ /^#{ Regexp.escape(terminating_str) }$/i
+      abort if line.chomp =~ /^#{ Regexp.escape(terminating_str) }$/i
       break if line =~ /^#{ Regexp.escape(evaluating_str) }$/i
     end
   end

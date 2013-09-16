@@ -6,3 +6,4 @@ sl.items do
   add("Toothpaste",2)
   add("Computer",1)
 end
+p sl.item_list

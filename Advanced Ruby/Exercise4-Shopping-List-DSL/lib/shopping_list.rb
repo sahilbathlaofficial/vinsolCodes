@@ -9,7 +9,7 @@ class ShoppingList
   end
 
   def add(name, quantity)
-    self.item_list << Item.new(name, quantity)
+    self.item_list << Item.new(name: name, quantity: quantity)
   end
 
   ## block to proc

@@ -6,8 +6,9 @@ puts "Enter check in date (yyyy-mm-dd)"
 check_in = gets.chomp
 puts "Enter check out date (yyyy-mm-dd)"
 check_out = gets.chomp
-hotels =  HotelList.get_hotel_list
 puts "\n"
 abort("You can't go back in time ") if(check_out < check_in)
-enquiry = Enquiry.new(check_in, check_out)
-HotelList.show_price_catalogue(enquiry)
+hotel_list =  HotelList.new
+hotels = hotel_list.get_hotel_list
+enquiry = Enquiry.new(check_in: check_in,check_out: check_out)
+hotel_list.show_price_catalogue(enquiry: enquiry)

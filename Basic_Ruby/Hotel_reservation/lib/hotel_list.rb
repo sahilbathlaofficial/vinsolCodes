@@ -1,44 +1,41 @@
 require_relative 'hotel'
 require_relative 'temp_reservation'
 require_relative 'season'
-
-require 'json'
+require_relative 'json_reader'
 
 class HotelList
 
-@@hotels_list = []
+include JSONReader
+attr_accessor :hotels_list
 
-  def self.get_hotel_list
-    dir = File.dirname($0)
-    file_contents = [], seasonal_rates = []
-    File.open(dir+'/hotels.json', "r") do |file|
-      begin
-        file.flock(File::LOCK_SH)
-        file_contents = file.read
-      ensure
-        file.close
-      end
-    end
-    file_contents = JSON.parse(file_contents)
+  def initialize
+    @hotels_list = []
+  end
+
+  def get_hotel_list
+    seasonal_rates = []
+    file_contents = json_to_hash('hotels.json')
     file_contents.each do |hotel_data|
       if(hotel_data.has_key? "seasonal_rates")
         hotel_data["seasonal_rates"].each do |occasion|
           occasion.each do |occasion_name, occasion_details|
-            seasonal_rates << Season.new(occasion_name, occasion_details["start"], occasion_details["end"], occasion_details["rate"])
+            season_params = {name: occasion_name, start_date: occasion_details["start"], end_date: occasion_details["end"], rate: occasion_details["rate"]}
+            seasonal_rates << Season.new(season_params)
           end
         end
-      end   
-      @@hotels_list << Hotel.new(hotel_data["Hotel_name"], hotel_data["rate"], seasonal_rates, hotel_data["tax"])
+      end 
+      hotel_params = {name: hotel_data["Hotel_name"], rate: hotel_data["rate"], seasonal_rates: seasonal_rates, tax: hotel_data["tax"]} 
+      self.hotels_list << Hotel.new(hotel_params)
       seasonal_rates = []
     end
-  @@hotels_list
   end
 
-  def self.show_price_catalogue(enquiry)
-    @@hotels_list.each do |hotel|
-      reservation = TempReservation.new
+  def show_price_catalogue(enquiry_hash)
+    hotels_list.each do |hotel|
+      reservation = TempReservation.new(enquiry: enquiry_hash[:enquiry], hotel: hotel)
       puts "\n### Hotel : #{hotel.name} ######################\n"
-      reservation.show_reservation(enquiry, hotel)
+      reservation.show_reservation
     end
   end
+
 end

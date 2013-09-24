@@ -19,12 +19,12 @@ class CSVParser
       Object.const_set(dynamic_class, Class.new)
       dynamic_class =  Object.const_get(dynamic_class)
       #make attribute accesor for each instance variable
-      headers.each { |instance_variable| dynamic_class.class_eval { attr_accessor instance_variable.to_sym } }
+      headers.each { |instance_variable| dynamic_class.class_eval { attr_accessor ('i' + instance_variable.gsub(' ','')).to_sym } }
       #make a function to display the values in these instance variable
       dynamic_class.class_eval do 
         define_method "show_csv_data" do 
           output = ''
-          instance_variables.each { |instance_variable| output += (eval instance_variable.to_s) + ' ' }
+          instance_variables.each { |instance_variable| output += (eval  instance_variable.to_s) + ' ' }
           output
         end
       end
@@ -38,7 +38,7 @@ class CSVParser
       rows.each do |instance_variables_values|
         dynamic_class_objects << dynamic_class.new
         for i in 0...no_of_elements
-          dynamic_class_objects[-1].instance_eval "self.#{ headers[i] } = instance_variables_values[i]"
+          dynamic_class_objects[-1].instance_eval "self.i#{ headers[i].gsub(' ','') } = instance_variables_values[i]"
         end
       end
       dynamic_class_objects

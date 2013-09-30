@@ -14,8 +14,8 @@ class Name
   def get_name(type = "first")
     puts "Enter #{ type } name"
     name = gets.chomp
-    raise NotNull, "Name can't have Null values", "" if(name.empty?)
-    raise NotCapitalize, "Initial letter not capital", "" if(name[0] !~ /[A-Z]/)
+    raise NotNull  if(name.empty?)
+    raise NotCapitalize if(name[0] !~ /[A-Z]/)
     name
   end
 

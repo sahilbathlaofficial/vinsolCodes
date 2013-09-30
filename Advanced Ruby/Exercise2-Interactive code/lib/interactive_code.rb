@@ -11,6 +11,7 @@ class InteractiveCode
     @code = ''
   end 
 
+# Benchmarkable results in switch case takes more time than if else  in real time
   def generate_code(terminating_str, evaluating_str = "END", shell_symbol = ">" )
     loop do
       print string_color(" #{ shell_symbol } ", 31)
@@ -24,8 +25,8 @@ class InteractiveCode
   def evaluate
     begin
       eval @code 
-    rescue Exception => code_execution_error
-      code_execution_error
+    rescue Exception => error
+      error
     end
   end    
 

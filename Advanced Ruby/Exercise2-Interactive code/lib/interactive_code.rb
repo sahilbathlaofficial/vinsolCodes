@@ -1,5 +1,5 @@
 require_relative 'colorize'
-require 'benchmark'
+
 class InteractiveCode
 
   include Colorize
@@ -20,8 +20,6 @@ class InteractiveCode
 # Real time in if else :- 5.434597
 
   def generate_code(terminating_str, evaluating_str = "END", shell_symbol = ">" )
-    Benchmark.bm do |x|
-      x.report do
     loop do
       print string_color(" #{ shell_symbol } ", 31)
       line = gets 
@@ -29,8 +27,6 @@ class InteractiveCode
       abort if line.chomp =~ /^#{ Regexp.escape(terminating_str) }$/i
       break if line =~ /^#{ Regexp.escape(evaluating_str) }$/i
     end
-  end
-end
   end
 
   def evaluate

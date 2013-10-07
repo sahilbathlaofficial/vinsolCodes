@@ -26745,3 +26745,3077 @@ Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:47:07 +0530
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:50:42 +0530
+Processing by ControllerDevise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 5ms
+Processing by ControllerDevise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.2ms)
+Completed 200 OK in 178ms (Views: 15.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:50:42 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 14:50:45 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.0ms)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:50:45 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:50:45 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 14:50:49 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (16.2ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.8ms)
+Completed 200 OK in 51ms (Views: 11.9ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:50:49 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:50:50 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 14:50:50 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (4.5ms)
+Completed 200 OK in 29ms (Views: 9.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:50:50 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 14:51:26 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (9.2ms)
+Completed 200 OK in 41ms (Views: 14.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:51:26 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 14:51:28 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (4.7ms)
+Completed 200 OK in 31ms (Views: 9.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:51:28 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-07 14:51:37 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_in"}
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:51:37 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (12.4ms)
+Completed 200 OK in 23ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:51:37 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:52:17 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (12.4ms)
+Completed 200 OK in 24ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:52:17 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:52:19 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.1ms)
+Completed 200 OK in 19ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:52:19 +0530
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:52:19 +0530
+Processing by ControllerDevise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 3ms
+Processing by ControllerDevise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.1ms)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:52:19 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:52:24 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.4ms)
+Completed 200 OK in 17ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:52:24 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 14:52:44 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.7ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:52:44 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:52:44 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:52:48 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (6.7ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:52:48 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:52:48 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:52:58 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (6.2ms)
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:52:58 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:52:58 +0530
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:52:59 +0530
+Processing by ControllerDevise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 4ms
+Processing by ControllerDevise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (5.8ms)
+Completed 200 OK in 14ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:52:59 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 14:54:00 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (9.4ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:54:00 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:54:00 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:54:06 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.6ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:54:06 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:54:06 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 14:54:14 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.9ms)
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:54:15 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:54:15 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:54:18 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (5.9ms)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:54:19 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:54:19 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:55:09 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.2ms)
+Completed 200 OK in 21ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:09 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:55:09 +0530
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:55:10 +0530
+Processing by ControllerDevise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 3ms
+Processing by ControllerDevise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.2ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:10 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:55:10 +0530
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:55:11 +0530
+Processing by ControllerDevise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 4ms
+Processing by ControllerDevise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.3ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:11 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:55:11 +0530
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:55:11 +0530
+Processing by ControllerDevise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 4ms
+Processing by ControllerDevise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.9ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:11 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:55:11 +0530
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:55:11 +0530
+Processing by ControllerDevise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 4ms
+Processing by ControllerDevise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.2ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:11 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:55:11 +0530
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:55:17 +0530
+Processing by ControllerDevise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+9UEq3gORvmWHMkmX2lRQ7OX7LL49Cb7Oe1vSWMuKI=", "user"=>{"email"=>"sahil@vinsol.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'sahil@vinsol.com' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-10-07 08:58:46', `current_sign_in_at` = '2013-10-07 09:25:17', `sign_in_count` = 3, `updated_at` = '2013-10-07 09:25:17' WHERE `users`.`id` = 1
+  [1m[36m (51.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 195ms (ActiveRecord: 53.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-07 14:55:17 +0530
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 188ms (Views: 179.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/controller_devise/registrations.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/controller_devise/omniauth_callback.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/controller_devise/sessions.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/omniauth_callback.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/controller_devise/omniauth_callback.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/controller_devise/registrations.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/controller_devise/sessions.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/omniauth_callback.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2013-10-07 14:55:18 +0530
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (53.9ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2013-10-07 14:55:20 +0530
+Processing by ControllerDevise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7DC4E4tcL96BEgTqGY/MwGD9HvZ9gPtESSvHi5aMmL8="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-07 14:55:20 +0530
+Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:55:20 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.5ms)
+Completed 200 OK in 21ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:55:21 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:56:42 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.9ms)
+Completed 200 OK in 91ms (Views: 15.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:56:42 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:56:42 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:56:43 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (6.9ms)
+Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:56:43 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:56:43 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:56:45 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.3ms)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:56:45 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:56:45 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 14:57:03 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.0ms)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:57:03 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:57:03 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 14:57:48 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (3.8ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+     5:   <div id="content">
+     6: 
+     7:     <div id="formContainer">
+     8:       <% if !(flash[:notice].empty?) %>
+     9:         <div id="errorContainer">
+    10:           <%= flash[:notice] %>
+    11:           <% flash[:notice] = '' %>
+  app/views/devise/registrations/new.html.erb:8:in `_app_views_devise_registrations_new_html_erb__97313470839296750_70168194807200'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.1ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 14:58:01 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.6ms)
+Completed 200 OK in 18ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:58:01 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:58:01 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 14:58:17 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (8.8ms)
+Completed 200 OK in 19ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:58:17 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:58:17 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 14:58:19 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.3ms)
+Completed 200 OK in 17ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:58:19 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:58:19 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 14:58:25 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.8ms)
+Completed 200 OK in 36ms (Views: 11.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:58:25 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:58:25 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 14:59:09 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.6ms)
+Completed 200 OK in 103ms (Views: 11.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:59:09 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:59:09 +0530
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-10-07 14:59:17 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_in"}
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:59:17 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.9ms)
+Completed 200 OK in 25ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:59:17 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:59:17 +0530
+
+
+Started POST "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:59:20 +0530
+Processing by ControllerDevise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+Completed 401 Unauthorized in 4ms
+Processing by ControllerDevise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.0ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:59:20 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:59:20 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 14:59:22 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.2ms)
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 14:59:22 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 14:59:23 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:02:22 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.2ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:02:22 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:02:22 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:02:31 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (33.5ms)
+Completed 500 Internal Server Error in 41ms
+
+ActionView::Template::Error (undefined method `to' for #<#<Class:0x007fa29c42ebe0>:0x007fa29c5db6c8>):
+    26:       <hr>
+    27:       <div id="sign_up">
+    28:         New to vTweet? 
+    29:         <%= link to 'Sign Up', new_user_registration_path %>
+    30:         <end>
+    31: 
+    32:     <% end %>
+  app/views/devise/registrations/new.html.erb:29:in `block in _app_views_devise_registrations_new_html_erb__97313470839296750_70168189921600'
+  app/views/devise/registrations/new.html.erb:15:in `_app_views_devise_registrations_new_html_erb__97313470839296750_70168189921600'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (17.4ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:02:48 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (41.2ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionView::Template::Error (undefined method `to' for #<#<Class:0x007fa29c42ebe0>:0x007fa29c449378>):
+    26:       <hr>
+    27:       <div id="sign_up">
+    28:         New to vTweet? 
+    29:         <%= link to 'Sign Up', new_user_registration_path %>
+    30:       </div>
+    31: 
+    32:     <% end %>
+  app/views/devise/registrations/new.html.erb:29:in `block in _app_views_devise_registrations_new_html_erb__97313470839296750_70168191601820'
+  app/views/devise/registrations/new.html.erb:15:in `_app_views_devise_registrations_new_html_erb__97313470839296750_70168191601820'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.7ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:02:59 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (9.4ms)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:02:59 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:02:59 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:03:34 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (8.7ms)
+Completed 200 OK in 21ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:03:34 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:04:23 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.2ms)
+Completed 200 OK in 63ms (Views: 58.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:04:23 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:04:23 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:04:24 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.1ms)
+Completed 200 OK in 16ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:04:24 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:04:25 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.0ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:04:25 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:04:25 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.4ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:04:25 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:04:25 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.2ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:04:25 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:04:42 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (4.9ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:04:42 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:04:54 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (4.6ms)
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:04:54 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:04:54 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:05:04 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (8.0ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:05:04 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:05:04 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:05:16 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (8.3ms)
+Completed 200 OK in 141ms (Views: 137.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:05:16 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:05:16 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:05:29 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.9ms)
+Completed 200 OK in 64ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:05:29 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:05:29 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:05:29 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (8.5ms)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:05:29 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:05:30 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.4ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:05:30 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:05:35 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.5ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:05:35 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:05:35 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:06:51 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+ERROR: compiling _app_views_devise_registrations_new_html_erb__97313470839296750_70168195970040 RAISED /home/vinsol/Downloads/codes/Rails/vTweet/app/views/devise/registrations/new.html.erb:29: syntax error, unexpected '='
+..., new_user_session_path, class="button" );@output_buffer.saf...
+...                               ^
+Function body:           def _app_views_devise_registrations_new_html_erb__97313470839296750_70168195970040(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "devise/registrations/new";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='
+'; content_for :title, "vTweet Sign up" 
+@output_buffer.safe_append='<div id="container">
+
+  <div id="content">
+
+    <div id="formContainer">
+';       if (flash[:notice]) 
+@output_buffer.safe_append='        <div id="errorContainer">
+          ';@output_buffer.append=( flash[:notice] );@output_buffer.safe_append='
+';           flash[:notice] = nil 
+@output_buffer.safe_append='        </div>
+';       end 
+@output_buffer.safe_append='      
+    ';@output_buffer.append=  form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| @output_buffer.safe_append='
+
+      <div>
+        ';@output_buffer.append=( f.email_field :email, :class => 'inputField', :placeholder => 'Enter Company Email', :size => '40'  );@output_buffer.safe_append='
+      </div>
+
+      <div>
+        ';@output_buffer.append=( f.password_field :password, :class => 'inputField', :placeholder => 'Password', :size => '30' );@output_buffer.safe_append='
+        ';@output_buffer.append=( f.submit "Sign up" );@output_buffer.safe_append='
+      </div>
+
+      <hr>
+      <div id="sign_in">
+        Already on vTweet? 
+        ';@output_buffer.append=( link_to 'Sign In', new_user_session_path, class="button" );@output_buffer.safe_append='
+      </div>
+
+';     end 
+@output_buffer.safe_append='
+    <!--';@output_buffer.append=( render "devise/shared/links" );@output_buffer.safe_append=' -->
+    </div>
+
+    <p class="text">Welcome to vTweet.<br>
+    Find out what\'s happening, right now, with the people and organizations you care about.
+    </p>
+  </div>
+</div>';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `module_eval'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `compile'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:248:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `compile!'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:142:in `block in render'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications.rb:161:in `instrument'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/template.rb:141:in `render'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:23:in `render'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:97:in `render'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/usr/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/responder.rb:233:in `default_render'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/responder.rb:161:in `to_html'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/responder.rb:154:in `respond'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/responder.rb:147:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/mime_responds.rb:330:in `respond_with'
+/var/lib/gems/1.9.1/gems/devise-3.1.1/app/controllers/devise/registrations_controller.rb:8:in `new'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:189:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:443:in `_run__1958729543114513485__process_action__callbacks'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:136:in `process'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:44:in `process'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal.rb:195:in `dispatch'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_controller/metal.rb:231:in `block in action'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/routing/mapper.rb:44:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `each'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:655:in `call'
+/var/lib/gems/1.9.1/gems/omniauth-1.1.4/lib/omniauth/strategy.rb:184:in `call!'
+/var/lib/gems/1.9.1/gems/omniauth-1.1.4/lib/omniauth/strategy.rb:164:in `call'
+/var/lib/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/var/lib/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/var/lib/gems/1.9.1/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.0/lib/active_record/query_cache.rb:36:in `call'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/var/lib/gems/1.9.1/gems/activerecord-4.0.0/lib/active_record/migration.rb:369:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__987694349205495941__call__callbacks'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/var/lib/gems/1.9.1/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+/var/lib/gems/1.9.1/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+/var/lib/gems/1.9.1/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/var/lib/gems/1.9.1/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+/var/lib/gems/1.9.1/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+/var/lib/gems/1.9.1/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/var/lib/gems/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.3ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (/home/vinsol/Downloads/codes/Rails/vTweet/app/views/devise/registrations/new.html.erb:29: syntax error, unexpected '='
+..., new_user_session_path, class="button" );@output_buffer.saf...
+...                               ^):
+    26:       <hr>
+    27:       <div id="sign_in">
+    28:         Already on vTweet? 
+    29:         <%= link_to 'Sign In', new_user_session_path, class="button" %>
+    30:       </div>
+    31: 
+    32:     <% end %>
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.0) lib/action_view/template.rb:248:in `block in compile!'
+  <internal:prelude>:10:in `synchronize'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.0) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.0) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /usr/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/responder.rb:233:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/responder.rb:161:in `to_html'
+  actionpack (4.0.0) lib/action_controller/metal/responder.rb:154:in `respond'
+  actionpack (4.0.0) lib/action_controller/metal/responder.rb:147:in `call'
+  actionpack (4.0.0) lib/action_controller/metal/mime_responds.rb:330:in `respond_with'
+  devise (3.1.1) app/controllers/devise/registrations_controller.rb:8:in `new'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:443:in `_run__1958729543114513485__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/mapper.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  omniauth (1.1.4) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.1.4) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__987694349205495941__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.5ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:07:22 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (8.0ms)
+Completed 200 OK in 140ms (Views: 136.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:07:23 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:07:23 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:07:51 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (9.4ms)
+Completed 200 OK in 66ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:07:51 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:07:51 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:08:06 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (8.2ms)
+Completed 200 OK in 63ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:08:06 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:08:06 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:08:17 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.5ms)
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:08:18 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:08:18 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:08:45 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.5ms)
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:08:45 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:08:45 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:08:56 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.7ms)
+Completed 200 OK in 139ms (Views: 135.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:08:56 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:08:56 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:09:17 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.9ms)
+Completed 200 OK in 64ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:09:17 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:09:17 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:09:47 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.7ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:09:47 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:09:47 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:09:58 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.2ms)
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:09:58 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:09:58 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:10:59 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (9.9ms)
+Completed 200 OK in 88ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:10:59 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:10:59 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:11:15 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.3ms)
+Completed 200 OK in 146ms (Views: 142.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:11:15 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:11:15 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:11:19 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (9.1ms)
+Completed 200 OK in 85ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:11:19 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:11:19 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:11:24 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.1ms)
+Completed 200 OK in 72ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:11:25 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:11:25 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:12:13 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (8.0ms)
+Completed 200 OK in 64ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:12:13 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:12:13 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:12:34 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.7ms)
+Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:12:34 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:12:34 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:13:33 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.6ms)
+Completed 200 OK in 140ms (Views: 135.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:13:33 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:13:33 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:13:40 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.8ms)
+Completed 200 OK in 64ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:13:40 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:13:40 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:14:05 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.2ms)
+Completed 200 OK in 65ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:14:05 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:14:05 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:14:14 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.4ms)
+Completed 200 OK in 61ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:14:14 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:14:14 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:14:23 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.7ms)
+Completed 200 OK in 63ms (Views: 59.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:14:23 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:14:23 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:15:10 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.5ms)
+Completed 200 OK in 140ms (Views: 137.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:15:10 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:15:10 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:15:11 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (8.2ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:15:11 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:15:22 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.5ms)
+Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:15:22 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:15:22 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:15:22 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.7ms)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:15:22 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:15:22 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.1ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:15:23 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:15:23 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.9ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:15:23 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:15:23 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.0ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:15:23 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:15:23 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.1ms)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:15:23 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:15:55 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.8ms)
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:15:55 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:15:55 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:16:02 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.7ms)
+Completed 200 OK in 149ms (Views: 145.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:16:02 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:16:02 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:16:06 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.9ms)
+Completed 200 OK in 61ms (Views: 57.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:16:07 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:16:07 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:16:11 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.9ms)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:16:11 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:16:11 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:16:20 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (8.5ms)
+Completed 200 OK in 69ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:16:20 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:16:20 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:16:24 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.1ms)
+Completed 200 OK in 65ms (Views: 61.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:16:25 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:16:25 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:16:43 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.8ms)
+Completed 200 OK in 136ms (Views: 132.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:16:43 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:16:43 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:17:04 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (8.3ms)
+Completed 200 OK in 79ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:17:05 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:17:05 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:17:08 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (10.9ms)
+Completed 200 OK in 70ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:17:09 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:17:09 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:17:14 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.4ms)
+Completed 200 OK in 62ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:17:14 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:17:14 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:17:19 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.4ms)
+Completed 200 OK in 64ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:17:20 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:17:20 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:18:19 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.7ms)
+Completed 200 OK in 138ms (Views: 135.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:18:19 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:18:19 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:18:26 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.9ms)
+Completed 200 OK in 62ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:18:26 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:18:26 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:18:47 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.9ms)
+Completed 200 OK in 67ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:18:47 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:18:47 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:18:59 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.3ms)
+Completed 200 OK in 33ms (Views: 10.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:18:59 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:19:00 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.2ms)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:19:00 +0530
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:19:06 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:20:23 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.1ms)
+Completed 200 OK in 83ms (Views: 59.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:20:23 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:20:23 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:20:26 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (1.6ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.3ms)
+Completed 200 OK in 36ms (Views: 11.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:20:26 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:21:07 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.9ms)
+Completed 200 OK in 89ms (Views: 59.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:21:07 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:21:07 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:21:15 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (9.7ms)
+Completed 200 OK in 88ms (Views: 64.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:21:15 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:21:15 +0530
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2013-10-07 15:21:38 +0530
+
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (42.4ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:21:43 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.1ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:21:43 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:21:43 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:21:48 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"okJ8fXYT8GezAZMlTdOnSfc4jeTZSHrAFFPRl3xIBN0=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.9ms)
+Completed 200 OK in 33ms (Views: 10.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:21:48 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:21:49 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"okJ8fXYT8GezAZMlTdOnSfc4jeTZSHrAFFPRl3xIBN0=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (4.7ms)
+Completed 200 OK in 29ms (Views: 8.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:21:50 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:21:50 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (6.9ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:21:51 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:21:57 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.6ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:21:57 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:22:24 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.5ms)
+Completed 200 OK in 88ms (Views: 59.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:22:24 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:22:24 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:22:27 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.6ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:22:27 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:22:27 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:22:39 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.7ms)
+Completed 200 OK in 84ms (Views: 57.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:22:39 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:22:39 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:22:42 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (9.5ms)
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:22:42 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:22:42 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:22:49 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.6ms)
+Completed 200 OK in 80ms (Views: 56.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:22:50 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:22:50 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:22:54 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.6ms)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:22:55 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:22:55 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:22:59 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.6ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:22:59 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:22:59 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:23:02 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.8ms)
+Completed 200 OK in 40ms (Views: 12.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:23:02 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:23:02 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:24:04 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.4ms)
+Completed 200 OK in 99ms (Views: 76.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:24:05 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:24:05 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:24:19 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.6ms)
+Completed 200 OK in 88ms (Views: 59.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:24:19 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:24:19 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:24:26 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.8ms)
+Completed 200 OK in 177ms (Views: 72.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:24:27 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:24:27 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:24:33 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.5ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:24:33 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:24:33 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:24:35 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.3ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:24:35 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:24:35 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.3ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.7ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.5ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.4ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.4ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:24:36 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.8ms)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:24:37 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:24:37 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:25:19 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY '' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.8ms)
+Completed 200 OK in 116ms (Views: 91.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:25:19 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:25:19 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:25:23 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (7.7ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:25:23 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:25:23 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:25:24 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (55.7ms)
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:25:24 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:25:24 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:25:24 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (6.0ms)
+Completed 200 OK in 113ms (Views: 109.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:25:24 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:25:24 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:25:41 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.1ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:25:41 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:26:34 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (12.7ms)
+Completed 200 OK in 24ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:26:34 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:05 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (6.7ms)
+Completed 200 OK in 65ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:05 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:27:05 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:06 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (10.4ms)
+Completed 200 OK in 23ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:06 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:13 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.1ms)
+Completed 200 OK in 64ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:13 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:27:13 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:14 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.5ms)
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:14 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:18 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.0ms)
+Completed 200 OK in 62ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:18 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:27:18 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:19 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (10.6ms)
+Completed 200 OK in 22ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:19 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:19 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.8ms)
+Completed 200 OK in 20ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:20 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:24 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (90.7ms)
+Completed 200 OK in 149ms (Views: 145.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:24 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:27:24 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:25 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.8ms)
+Completed 200 OK in 22ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:25 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:37 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.6ms)
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:37 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:27:37 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:43 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.9ms)
+Completed 200 OK in 69ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:43 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:27:43 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:46 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.5ms)
+Completed 200 OK in 80ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:46 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:27:46 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:52 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.8ms)
+Completed 200 OK in 71ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:52 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:27:52 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:27:57 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.9ms)
+Completed 200 OK in 150ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:27:57 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:27:57 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:28:03 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.1ms)
+Completed 200 OK in 19ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:28:03 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:28:05 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (6.8ms)
+Completed 200 OK in 15ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:28:06 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:28:21 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (11.6ms)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:28:21 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:28:22 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (4.8ms)
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:28:22 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:28:24 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.4ms)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:28:24 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:28:26 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.1ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:28:26 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:28:27 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (6.7ms)
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:28:27 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:29:00 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (12.8ms)
+Completed 200 OK in 68ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:29:00 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:29:01 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:29:14 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.2ms)
+Completed 200 OK in 68ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:29:14 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:29:14 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:29:15 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.0ms)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:29:15 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:29:16 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.3ms)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:29:16 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:29:30 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.6ms)
+Completed 200 OK in 74ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:29:30 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:29:30 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:29:31 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.6ms)
+Completed 200 OK in 21ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:29:31 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:29:32 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.3ms)
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:29:33 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:29:35 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (6.1ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:29:35 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:29:37 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.8ms)
+Completed 200 OK in 19ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:29:37 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:29:37 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.2ms)
+Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:29:37 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:30:06 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (11.4ms)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:30:06 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:30:32 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.1ms)
+Completed 200 OK in 76ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:30:32 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:30:32 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:30:38 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (10.0ms)
+Completed 200 OK in 69ms (Views: 62.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:30:38 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:30:38 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:30:46 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.9ms)
+Completed 200 OK in 69ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:30:46 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:30:46 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:30:52 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (9.8ms)
+Completed 200 OK in 74ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:30:52 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:30:52 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:31:00 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (8.2ms)
+Completed 200 OK in 72ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:31:00 +0530
+
+
+Started GET "/assets/background.jpg" for 127.0.0.1 at 2013-10-07 15:31:00 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:31:20 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (5.4ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:31:20 +0530
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:31:21 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (7.5ms)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:31:21 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:31:36 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (4.7ms)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:31:36 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:32:53 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (75.1ms)
+Completed 200 OK in 90ms (Views: 81.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:32:53 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:33:06 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (9.6ms)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:33:06 +0530
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:33:13 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (9.2ms)
+Completed 200 OK in 20ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:33:13 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:33:31 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"pramod@vinsol.com", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 141ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: confirm_password):
+  activerecord (4.0.0) lib/active_record/attribute_assignment.rb:47:in `rescue in _assign_attribute'
+  activerecord (4.0.0) lib/active_record/attribute_assignment.rb:42:in `_assign_attribute'
+  activerecord (4.0.0) lib/active_record/attribute_assignment.rb:29:in `block in assign_attributes'
+  activerecord (4.0.0) lib/active_record/attribute_assignment.rb:23:in `each'
+  activerecord (4.0.0) lib/active_record/attribute_assignment.rb:23:in `assign_attributes'
+  activerecord (4.0.0) lib/active_record/core.rb:192:in `initialize'
+  activerecord (4.0.0) lib/active_record/inheritance.rb:27:in `new'
+  activerecord (4.0.0) lib/active_record/inheritance.rb:27:in `new'
+  devise (3.1.1) lib/devise/models/registerable.rb:20:in `new_with_session'
+  devise (3.1.1) app/controllers/devise/registrations_controller.rb:92:in `build_resource'
+  devise (3.1.1) app/controllers/devise/registrations_controller.rb:13:in `create'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:443:in `_run__1958729543114513485__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/mapper.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  omniauth (1.1.4) lib/omniauth/strategy.rb:184:in `call!'
+  omniauth (1.1.4) lib/omniauth/strategy.rb:164:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__987694349205495941__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.8ms)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2013-10-07 15:38:33 +0530
+Processing by ControllerDevise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/sign_in_sign_up (10.3ms)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:33 +0530
+
+
+Started POST "/user" for 127.0.0.1 at 2013-10-07 15:38:42 +0530
+Processing by ControllerDevise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY=", "user"=>{"email"=>"pramod@vinsol.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: password_confirmation
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'pramod@vinsol.com' LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT 1 AS one FROM `users` WHERE `users`.`email` = BINARY 'pramod@vinsol.com' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `users` (`created_at`, `email`, `encrypted_password`, `updated_at`) VALUES ('2013-10-07 10:08:42', 'pramod@vinsol.com', '$2a$10$HCMGlLBWNUCJNxbqh/.yw.fbz.tpt93ec9o1NA.zZI5fwCXNC0gMu', '2013-10-07 10:08:42')[0m
+  [1m[35m (128.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE `users` SET `last_sign_in_at` = '2013-10-07 10:08:42', `current_sign_in_at` = '2013-10-07 10:08:42', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2013-10-07 10:08:42' WHERE `users`.`id` = 2
+  [1m[36m (47.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 410ms (ActiveRecord: 179.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-07 15:38:42 +0530
+Processing by UsersController#show as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 2 LIMIT 1[0m
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 134ms (Views: 123.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/controller_devise/omniauth_callback.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/controller_devise/registrations.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/controller_devise/sessions.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/omniauth_callback.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/controller_devise/omniauth_callback.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/controller_devise/sessions.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/controller_devise/registrations.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/omniauth_callback.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+
+Started GET "/images/favicon.ico" for 127.0.0.1 at 2013-10-07 15:38:43 +0530
+
+ActionController::RoutingError (No route matches [GET] "/images/favicon.ico"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.8ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (53.6ms)
+
+
+Started DELETE "/user/sign_out" for 127.0.0.1 at 2013-10-07 15:38:51 +0530
+Processing by ControllerDevise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kFV8JqIjmRao4h0eIURqNO0d+68hyP+HqU6fb5lkTtY="}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 2 ORDER BY `users`.`id` ASC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-10-07 15:38:51 +0530
+Processing by UsersController#show as HTML
+Redirected to http://localhost:3000/user/sign_in
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_in" for 127.0.0.1 at 2013-10-07 15:38:51 +0530
+Processing by ControllerDevise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/sign_in_sign_up (11.2ms)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sign_in_sign_up.css?body=1" for 127.0.0.1 at 2013-10-07 15:38:51 +0530

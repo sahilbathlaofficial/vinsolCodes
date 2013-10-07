@@ -49,16 +49,18 @@
           <a class="brand" href="#">VTweet</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Me", user_path(current_user), class: :appLinks  %></li>
             </ul>
             <div class="userHeading">
               <% if current_user %>
-              <p> 
-                Hello <%= current_user.firstname %>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-              </p>
+              <div class="dropdown">
+              <a id="dropdownMenu1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Settings</a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="settingsList">
+                <li role="presentation" ><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
+                <li role="presentation" class="divider"></li>
+                <li role="presentation" ><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+              </ul>
+            </div>
               <% end %>
             </div>
           </div><!--/.nav-collapse -->
@@ -72,9 +74,6 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

@@ -11,14 +11,3 @@
  *= require_self
  *= require_tree .
  */
-
-.userHeading
-{
-  margin-top: 10px;
-  text-align: right;
-}
-
-body 
-{
-  background: none;
-}

@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :set_user, :only => [:edit]
+
   def show
     if(current_user)
       @user = User.find(current_user)
@@ -8,4 +11,12 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  protected
+
+  def set_user
+    @user = current_user
+  end
+
+
 end

@@ -4,10 +4,15 @@
   <div id="content">
 
     <div id="formContainer">
+      <div id="errorContainer">
+        <% if !(flash[:notice].empty?) %>
+        <%= flash[:notice] %>
+        <% end %>
+      </div>
       
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
       <div>
-        <%= f.email_field :email, :autofocus => true, :class => 'inputField', :placeholder => 'Username or Email', :size => '40'  %>
+        <%= f.email_field :email, :autofocus => true, :class => 'inputField', :placeholder => 'Email', :size => '40'  %>
       </div>
 
       <div>

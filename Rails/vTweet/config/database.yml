@@ -10,7 +10,7 @@ development:
   database: vTweet_development
   pool: 5
   username: root
-  password: sahil
+  password: vinsol
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -23,7 +23,7 @@ test:
   database: vTweet_test
   pool: 5
   username: root
-  password: sahil
+  password: vinsol
   host: localhost
 
 production:
@@ -33,5 +33,5 @@ production:
   database: vTweet_production
   pool: 5
   username: root
-  password: sahil
+  password: vinsol
   host: localhost

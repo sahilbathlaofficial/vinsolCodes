@@ -56,7 +56,7 @@
             <div class="userHeading">
               <% if current_user %>
               <p> 
-                Hello <%= current_user.name %>
+                Hello <%= current_user.firstname %>
                 <%= link_to "Logout", destroy_user_session_path, method: :delete %>
               </p>
               <% end %>

@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
 
-  validates :name,  :username,presence: true
-  validates :username, uniqueness: true
+  validates :email, uniqueness: true
  
   devise :database_authenticatable, :registerable, :omniauthable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauth_providers => [:google_oauth2]

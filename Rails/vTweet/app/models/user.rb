@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  has_attached_file :avatar, :styles => { :medium => "250x250>", :thumb => "100x100>" }, :default_url => ActionController::Base.helpers.asset_path('missing.png')
+
   validates :email, uniqueness: true
  
   devise :database_authenticatable, :registerable, :omniauthable,

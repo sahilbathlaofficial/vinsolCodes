@@ -1,29 +1,45 @@
-<%= form_for @user, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :firstname, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :firstname, :class => 'text_field' %>
-    </div>
-  </div>
+<%= form_for @user, :html => { :class => 'form-horizontal', :html => { :multipart => true }   } do |f| %>
 
-  <div class="control-group">
-    <%= f.label :lastname, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :lastname, :class => 'text_field' %>
+  <div id="formHolder">
+    <div class="control-group">
+      <%= f.label :firstname, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :firstname, :class => 'text_field' %>
+      </div>
     </div>
-  </div>
 
-  <div class="control-group">
-    <%= f.label :email, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :email, :class => 'text_field' %>
+    <div class="control-group">
+      <%= f.label :lastname, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :lastname, :class => 'text_field' %>
+      </div>
     </div>
+
+    <div class="control-group">
+      <%= f.label :email, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.text_field :email, :class => 'text_field' %>
+      </div>
+    </div>  
+
+    <div class="control-group">
+      <br>
+      <%= f.label :picture, :class => 'control-label' %>
+      <div class="controls">  
+        <%= f.file_field :avatar %>
+      </div>
+    </div>
+    
+  </div> 
+
+  <div id="avatarHolder">
+    <%= image_tag current_user.avatar.url(:medium) %>
   </div>
-  
 
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 user_path(@user), :class => 'btn' %>
   </div>
+
 <% end %>

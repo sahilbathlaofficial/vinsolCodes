@@ -1,4 +1,3 @@
 #! /usr/bin/ruby
-require "time"
 require_relative "../lib/name.rb"
-name = Name.new
+name = Name.new(firstname: 'Sahil', lastname: 'Bathla')

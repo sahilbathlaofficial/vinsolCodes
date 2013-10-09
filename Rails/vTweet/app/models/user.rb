@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 
-  has_attached_file :avatar, :styles => { :medium => "250x250>", :thumb => "100x100>" }, :default_url => ActionController::Base.helpers.asset_path('missing.png')
+  belongs_to :connection
+
+  has_attached_file :avatar, :styles => { :large=> "200x200>", :medium => "100x100>", :thumb => "25x25>" }, :default_url => ActionController::Base.helpers.asset_path('missing.png')
 
   validates :email, uniqueness: true
  

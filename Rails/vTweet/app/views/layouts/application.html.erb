@@ -55,7 +55,12 @@
               <% if current_user %>
               
               <div class="dropdown">
-              <a id="dropdownMenu1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Settings</a>
+              <a id="dropdownMenu1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                <span>
+                  <%= image_tag current_user.avatar.url, width: '25px', height: '25px' %>
+                </span>
+                <span> Settings</span>
+              </a>
               <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1" id="settingsList">
                 <li role="presentation" ><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
                 <li role="presentation" class="divider"></li>
@@ -71,23 +76,30 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
+
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
+              <li class="nav-header">Groups</li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
-        <div class="span9">
+
+        <div class="span6">
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
+
+        <div class="span3">
+        </div>
+
       </div><!--/row-->
 
       <footer>
       </footer>
 
     </div> <!-- /container -->
+    
 
   </body>
 </html>

@@ -46,9 +46,9 @@ end
  gem 'bcrypt-ruby', '~> 3.0.0'
 
  # Testing
- # gem "rspec-rails", "~> 2.14.0"
- # gem "rspec", "~> 2.14.1"
- # gem "webrat", "0.7.2"
+ gem "rspec-rails", "~> 2.14.0"
+ gem "rspec", "~> 2.14.1"
+ gem "webrat", "0.7.2"
 
 # Use unicorn as the app server
 # gem 'unicorn'

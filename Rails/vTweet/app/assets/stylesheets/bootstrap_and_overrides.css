@@ -6,6 +6,11 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+.sidebar-nav
+{
+  margin-top:1.6em;
+}
+
 .navbar-inner, .sidebar-nav
 {
   background: #333;
@@ -35,15 +40,13 @@
   display:inline-block;
 }
 
-#avatarHolder
-{
-  position:absolute;
-  margin-left: 10em;
-  border: 0.4em solid #e9e9e4;
-  border-radius: 5px;
-}
-
 body 
 {
   background: none;
+}
+
+.hero-unit
+{
+  background: #333;
+  margin-top:em;
 }

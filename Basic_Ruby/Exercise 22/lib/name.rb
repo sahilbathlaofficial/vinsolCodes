@@ -27,4 +27,4 @@ class Name
     true
   end
 
-end
+end 

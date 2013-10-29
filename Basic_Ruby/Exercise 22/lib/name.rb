@@ -1,5 +1,6 @@
 require_relative 'not_null'
 require_relative 'not_capitalize'
+require_relative 'not_empty'
 
 class Name
 
@@ -22,7 +23,8 @@ class Name
   end
 
   def attribute_in_proper_format?(attribute_value)
-    raise NotNull  if(attribute_value.empty?)
+    raise NotNull if(attribute_value.nil?)
+    raise NotEmpty  if(attribute_value.empty?)
     raise NotCapitalize if(attribute_value[0] !~ /[A-Z]/)
     true
   end
